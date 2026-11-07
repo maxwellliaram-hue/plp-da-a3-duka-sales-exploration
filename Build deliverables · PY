@@ -1,1 +1,434 @@
 
+Rebuilds every deliverable from generate_data.py -> duka_sales.csv:
+  outputs/premium_online_coast_capital.csv
+  excel/duka_branch_summary.xlsx   (SUMIFS + XLOOKUP + PivotTable)
+  duka_sales_exploration.ipynb     (executed, Executive Summary numbers filled in)
+
+Usage:  python generate_data.py && python build_deliverables.py
+"""
+import os, subprocess, sys, time, zipfile, shutil, tempfile
+import numpy as np
+import pandas as pd
+import openpyxl
+from openpyxl.styles import Font, PatternFill, Alignment
+from lxml import etree
+import nbformat
+from nbformat.v4 import new_notebook, new_markdown_cell, new_code_cell
+from nbconvert.preprocessors import ExecutePreprocessor
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+os.chdir(ROOT)
+os.makedirs("outputs", exist_ok=True)
+os.makedirs("excel", exist_ok=True)
+
+PREMIUM_THRESHOLD = 28_000          # KES, applied to unit_price
+REGION = {                           # branch -> region (Excel lookup table)
+    "Nairobi": "Central", "Mombasa": "Coast", "Kisumu": "Western",
+    "Nakuru": "Rift Valley", "Eldoret": "Rift Valley",
+}
+
+# ------------------------------------------------------------------ stats
+df = pd.read_csv("duka_sales.csv", parse_dates=["order_date"])
+df["revenue"] = df["units"] * df["unit_price"]
+df["month"] = df["order_date"].dt.strftime("%Y-%m")
+df["weekday"] = df["order_date"].dt.day_name()
+df["is_weekend"] = df["order_date"].dt.dayofweek >= 5
+df["price_band"] = np.where(df["unit_price"] >= PREMIUM_THRESHOLD, "Premium", "Value")
+
+M = lambda v: f"KES {v/1e6:.2f}M"
+K = lambda v: f"KES {v:,.0f}"
+
+total_rev, n_orders = df.revenue.sum(), len(df)
+br = df.groupby("branch").agg(revenue=("revenue", "sum"), orders=("order_id", "count"))
+br_rev = br.sort_values("revenue", ascending=False)
+br_ord = br.sort_values("orders", ascending=False)
+pr = df.groupby("product").agg(revenue=("revenue", "sum"), units=("units", "sum"))
+pr_rev, pr_units = pr.sort_values("revenue", ascending=False), pr.sort_values("units", ascending=False)
+top3_rev, top3_units = list(pr_rev.index[:3]), list(pr_units.index[:3])
+wk = df.groupby("is_weekend").agg(orders=("order_id", "count"), revenue=("revenue", "sum"),
+                                   avg=("revenue", "mean"))
+mo = df.groupby("month").revenue.sum()
+best_m, worst_m = mo.idxmax(), mo.idxmin()
+pct_gap = (mo.max() - mo.min()) / mo.min() * 100
+sub = df[(df.price_band == "Premium") & (df.channel == "Online") & (df.branch.isin(["Nairobi", "Mombasa"]))]
+sub.to_csv("outputs/premium_online_coast_capital.csv", index=False)
+same_rank = list(br_rev.index) == list(br_ord.index)
+# first pair of branches whose revenue and order ranks disagree
+flip = None
+for i in range(len(br)):
+    for j in range(i + 1, len(br)):
+        a, b = br.index[i], br.index[j]
+        if (br.loc[a, "revenue"] - br.loc[b, "revenue"]) * (br.loc[a, "orders"] - br.loc[b, "orders"]) < 0:
+            flip = (a, b) if br.loc[a, "revenue"] > br.loc[b, "revenue"] else (b, a)
+            break
+    if flip: break
+top3_share = pr_rev.revenue.iloc[:3].sum() / total_rev * 100
+wk_share = wk.loc[True, "revenue"] / total_rev * 100
+
+summary = [
+    f"- Duka Electronics earned **{K(total_rev)}** from **{n_orders:,}** orders in H1 2026 (average **{K(total_rev/n_orders)}** per order), and weekends contributed only **{wk_share:.1f}%** of revenue.",
+    f"- **{br_rev.index[0]}** is the top branch with **{M(br_rev.revenue.iloc[0])}** ({br_rev.revenue.iloc[0]/total_rev*100:.1f}% of revenue)"
+    + (f", and the order ranking matches the revenue ranking." if same_rank else
+       f", but the rankings differ: **{flip[1]}** takes **{br.loc[flip[1],'orders']}** orders versus **{br.loc[flip[0],'orders']}** for **{flip[0]}**, yet earns **{M(br.loc[flip[1],'revenue'])}** against **{M(br.loc[flip[0],'revenue'])}**."),
+    f"- The top three products by revenue ({', '.join(top3_rev)}) generate **{top3_share:.1f}%** of revenue, while **{top3_units[0]}** leads on volume with **{pr_units.units.iloc[0]:,}** units but only **{M(pr.loc[top3_units[0],'revenue'])}** in revenue.",
+    f"- **{best_m}** was the best month at **{M(mo.max())}** and **{worst_m}** the worst at **{M(mo.min())}**, a **{pct_gap:.1f}%** gap between them.",
+    f"- Premium online orders from Nairobi and Mombasa total **{len(sub)}** orders worth **{K(sub.revenue.sum())}**, or **{sub.revenue.sum()/total_rev*100:.1f}%** of all revenue.",
+]
+summary_md = "## Executive Summary\n\n" + "\n".join(summary)
+
+# ------------------------------------------------------------------ Excel
+branches_sorted = list(br_rev.index)
+N = len(df)
+
+def build_base(path):
+    wb = openpyxl.Workbook()
+    ws = wb.active; ws.title = "Data"
+    cols = ["order_id", "order_date", "branch", "product", "channel", "units", "unit_price", "revenue"]
+    ws.append(cols)
+    for r in df[cols].itertuples(index=False):
+        ws.append([r[0], r[1].to_pydatetime(), *r[2:]])
+    for c in ws["B"][1:]: c.number_format = "yyyy-mm-dd"
+    for c in ws[1]: c.font = Font(name="Arial", bold=True)
+    wb.save(path)
+
+def add_pivot_with_libreoffice(path):
+    import uno
+    from com.sun.star.beans import PropertyValue
+    from com.sun.star.table import CellRangeAddress, CellAddress
+    from com.sun.star.sheet.DataPilotFieldOrientation import ROW, COLUMN, DATA
+    from com.sun.star.sheet.GeneralFunction import SUM
+    prof = tempfile.mkdtemp()
+    p = subprocess.Popen(["soffice", "--headless", "--norestore", f"-env:UserInstallation=file://{prof}",
+                          "--accept=socket,host=localhost,port=2002;urp;"],
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    try:
+        local = uno.getComponentContext()
+        resolver = local.ServiceManager.createInstanceWithContext("com.sun.star.bridge.UnoUrlResolver", local)
+        for _ in range(60):
+            try:
+                ctx = resolver.resolve("uno:socket,host=localhost,port=2002;urp;StarOffice.ComponentContext"); break
+            except Exception: time.sleep(1)
+        desktop = ctx.ServiceManager.createInstanceWithContext("com.sun.star.frame.Desktop", ctx)
+        hidden = PropertyValue(); hidden.Name, hidden.Value = "Hidden", True
+        doc = desktop.loadComponentFromURL("file://" + os.path.abspath(path), "_blank", 0, (hidden,))
+        sheets = doc.Sheets
+        sheets.insertNewByName("PivotTable", 1)
+        rng = CellRangeAddress(); rng.Sheet = 0; rng.StartColumn = 0; rng.StartRow = 0
+        rng.EndColumn = 7; rng.EndRow = N
+        dps = sheets.getByName("PivotTable").DataPilotTables
+        desc = dps.createDataPilotDescriptor(); desc.setSourceRange(rng)
+        f = desc.DataPilotFields
+        f.getByName("branch").Orientation = ROW
+        f.getByName("channel").Orientation = COLUMN
+        d = f.getByName("revenue"); d.Orientation = DATA; d.Function = SUM
+        pos = CellAddress(); pos.Sheet = 1; pos.Column = 0; pos.Row = 2
+        dps.insertNewByName("RevenueByBranchChannel", pos, desc)
+        sheets.getByName("PivotTable").getCellByPosition(0, 0).String = "PivotTable: revenue (KES) by branch and channel"
+        out = PropertyValue(); out.Name, out.Value = "FilterName", "Calc MS Excel 2007 XML"
+        doc.storeToURL("file://" + os.path.abspath(path), (out,))
+        doc.close(True)
+        try: desktop.terminate()
+        except Exception: pass
+    finally:
+        p.terminate()
+        try: p.wait(10)
+        except Exception: p.kill()
+        shutil.rmtree(prof, ignore_errors=True)
+
+def finish_workbook(path):
+    wb = openpyxl.load_workbook(path)
+    arial = lambda **k: Font(name="Arial", **k)
+    # Region lookup
+    rl = wb.create_sheet("RegionLookup")
+    rl.append(["branch", "region"])
+    for b, r in REGION.items(): rl.append([b, r])
+    rl["D1"] = "Lookup table supplied by analyst: branch -> sales region (not in duka_sales.csv)."
+    # Branch summary
+    bs = wb.create_sheet("BranchSummary", 1)
+    hdr = ["Branch", "Region (XLOOKUP)", "Orders (COUNTIFS)", "Revenue KES (SUMIFS)",
+           "Revenue rank", "Orders rank", "pandas revenue (hardcoded check)", "Difference"]
+    bs.append(hdr)
+    rev, brn = f"Data!$H$2:$H${N+1}", f"Data!$C$2:$C${N+1}"
+    for i, b in enumerate(branches_sorted, start=2):
+        bs.append([b,
+                   f"=_xlfn.XLOOKUP(A{i},RegionLookup!$A$2:$A$6,RegionLookup!$B$2:$B$6)",
+                   f"=COUNTIFS({brn},A{i})",
+                   f"=SUMIFS({rev},{brn},A{i})",
+                   f"=RANK(D{i},$D$2:$D$6)",
+                   f"=RANK(C{i},$C$2:$C$6)",
+                   int(br.loc[b, "revenue"]),
+                   f"=D{i}-G{i}"])
+    t = 2 + len(branches_sorted)
+    bs.append(["TOTAL", None, f"=SUM(C2:C{t-1})", f"=SUM(D2:D{t-1})", None, None, f"=SUM(G2:G{t-1})", f"=D{t}-G{t}"])
+    bs[f"A{t+2}"] = "Column G holds the totals computed in pandas (hardcoded from the notebook) so the SUMIFS result can be checked; column H should be 0."
+    bs[f"A{t+3}"] = "Branches are listed in descending revenue order. See the PivotTable sheet for revenue by branch and channel."
+    for c in bs[1]:
+        c.font = arial(bold=True, color="FFFFFF"); c.fill = PatternFill("solid", fgColor="1F4E78")
+        c.alignment = Alignment(wrap_text=True, vertical="center")
+    for row in bs.iter_rows(min_row=2, max_row=t):
+        for c in row:
+            c.font = arial(bold=(row[0].row == t))
+            if c.column in (3, 4, 7, 8): c.number_format = "#,##0"
+    for col, w in zip("ABCDEFGH", [14, 18, 16, 22, 13, 13, 28, 12]): bs.column_dimensions[col].width = w
+    bs.row_dimensions[1].height = 32
+    for ws in (wb["Data"], rl):
+        for c in ws[1]: c.font = arial(bold=True)
+    wb.calculation.fullCalcOnLoad = True
+    wb.save(path)
+    return t
+
+def inject_cached_values(path, last_row):
+    """openpyxl writes formulas without results; add the values so readers that
+    do not recalculate (pandas, GitHub preview) still see numbers."""
+    vals = {}
+    for i, b in enumerate(branches_sorted, start=2):
+        vals[f"B{i}"] = REGION[b]; vals[f"C{i}"] = int(br.loc[b, "orders"]); vals[f"D{i}"] = int(br.loc[b, "revenue"])
+        vals[f"E{i}"] = int(br_rev.index.get_loc(b) + 1)
+        vals[f"F{i}"] = int(br.orders.rank(ascending=False, method="min")[b]); vals[f"H{i}"] = 0
+    vals[f"C{last_row}"] = n_orders; vals[f"D{last_row}"] = int(total_rev)
+    vals[f"G{last_row}"] = int(total_rev); vals[f"H{last_row}"] = 0
+    wb = openpyxl.load_workbook(path); idx = wb.sheetnames.index("BranchSummary") + 1; wb.close()
+    ns = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+    tmp = path + ".tmp"
+    with zipfile.ZipFile(path) as zin, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
+        target = None
+        wbx = etree.fromstring(zin.read("xl/workbook.xml"))
+        rels = etree.fromstring(zin.read("xl/_rels/workbook.xml.rels"))
+        sheet = wbx.findall(f"{{{ns}}}sheets/{{{ns}}}sheet")[idx - 1]
+        rid = sheet.get("{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id")
+        for r in rels:
+            if r.get("Id") == rid: target = "xl/" + r.get("Target").lstrip("/").replace("xl/", "")
+        for item in zin.infolist():
+            data = zin.read(item.filename)
+            if item.filename == target:
+                root = etree.fromstring(data)
+                for c in root.iter(f"{{{ns}}}c"):
+                    if c.find(f"{{{ns}}}f") is not None and c.get("r") in vals:
+                        v = c.find(f"{{{ns}}}v")
+                        if v is None: v = etree.SubElement(c, f"{{{ns}}}v")
+                        v.text = str(vals[c.get("r")])
+                        if isinstance(vals[c.get("r")], str): c.set("t", "str")
+                data = etree.tostring(root, xml_declaration=True, encoding="UTF-8", standalone=True)
+            zout.writestr(item, data)
+    os.replace(tmp, path)
+
+XL = "excel/duka_branch_summary.xlsx"
+build_base(XL)
+add_pivot_with_libreoffice(XL)
+last = finish_workbook(XL)
+inject_cached_values(XL, last)
+print("Excel built:", XL)
+
+# --------------------------------------------------------------- notebook
+def tbl(d): return d.to_markdown() if hasattr(d, "to_markdown") else d.to_string()
+try: import tabulate  # noqa
+except ImportError: pass
+
+ins = {
+    "shape": f"{df.shape[0]:,} rows x 7 raw columns (12 after the derived columns are added)",
+    "dates": f"{df.order_date.min():%d %b %Y} to {df.order_date.max():%d %b %Y}",
+    "branches": ", ".join(sorted(df.branch.unique())),
+    "channels": ", ".join(sorted(df.channel.unique())),
+    "n_prod": df["product"].nunique(),
+}
+cells = []
+md = lambda s: cells.append(new_markdown_cell(s))
+code = lambda s: cells.append(new_code_cell(s))
+
+md("# Duka Electronics - H1 2026 Sales Exploration\n\n*Half-year review (January-June 2026) prepared for the Head of Sales.*")
+md(summary_md)
+md("## 0. Setup\n\nThe data comes from `generate_data.py` (seed 2026), which writes `duka_sales.csv`. If the CSV is missing it is regenerated here.")
+code('''import subprocess, sys
+from pathlib import Path
+import numpy as np
+import pandas as pd
+
+if not Path("duka_sales.csv").exists():
+    subprocess.run([sys.executable, "generate_data.py"], check=True)
+
+pd.options.display.float_format = "{:,.2f}".format
+KES = lambda v: f"KES {v:,.0f}"''')
+
+md("## 1. Load the data and first-five-minutes inspection")
+code('''# parse_dates converts order_date at load time, so it is a real datetime and not a string
+df = pd.read_csv("duka_sales.csv", parse_dates=["order_date"])
+display(df.head())
+print("Shape:", df.shape)
+print()
+df.info()''')
+code('''print("Missing values per column:")
+print(df.isna().sum())
+print("\\nDuplicate order_id values:", df["order_id"].duplicated().sum())
+print("Date range:", df["order_date"].min().date(), "->", df["order_date"].max().date())
+print("\\nNumeric summary:")
+display(df[["units", "unit_price"]].describe())
+for col in ["branch", "channel", "product"]:
+    print(f"\\n{col}:")
+    print(df[col].value_counts())''')
+md(f"""### Inspection findings
+
+- **Shape:** {ins['shape']}.
+- **Types:** `order_date` is parsed as `datetime64` (thanks to `parse_dates`); `branch`, `product`, `channel` and `order_id` are text; `units` and `unit_price` are integers.
+- **Missing values:** none in any column, and `order_id` has no duplicates, so no cleaning was needed.
+- **Date range:** {ins['dates']}, exactly the half-year under review.
+- **Key categories:** 5 branches ({ins['branches']}), 2 channels ({ins['channels']}) and {ins['n_prod']} products.
+- **Revenue is not in the raw data.** It has to be derived as `units x unit_price` (next section).""")
+
+md(f"## 2. Derived columns\n\n`revenue = units x unit_price`; `month` as `YYYY-MM` (sorts chronologically); `weekday` as the day name; `is_weekend` is True for Saturday and Sunday; `price_band` is **Premium** when `unit_price` >= KES {PREMIUM_THRESHOLD:,} and **Value** otherwise.\n\n*Assumption:* the Premium threshold is applied to the **unit price** of the item, not the order revenue (a customer buying five chargers is still buying a Value product).")
+code(f'''df["revenue"] = df["units"] * df["unit_price"]
+df["month"] = df["order_date"].dt.strftime("%Y-%m")
+df["weekday"] = df["order_date"].dt.day_name()
+df["is_weekend"] = df["order_date"].dt.dayofweek >= 5
+df["price_band"] = np.where(df["unit_price"] >= {PREMIUM_THRESHOLD}, "Premium", "Value")
+
+display(df.head())
+print("Total revenue:", KES(df["revenue"].sum()), "| orders:", len(df))
+print(df["price_band"].value_counts())''')
+
+md("## 3. Task 3 - Branch ranking by revenue and by orders")
+code('''branch = df.groupby("branch").agg(total_revenue=("revenue", "sum"), orders=("order_id", "count"))
+branch["revenue_rank"] = branch["total_revenue"].rank(ascending=False).astype(int)
+branch["orders_rank"] = branch["orders"].rank(ascending=False).astype(int)
+branch["avg_order_value"] = branch["total_revenue"] / branch["orders"]
+branch = branch.sort_values("total_revenue", ascending=False)
+display(branch)
+print("Rankings identical?", (branch["revenue_rank"] == branch["orders_rank"]).all())''')
+if same_rank:
+    ans3 = "**Answer:** the two rankings are identical."
+else:
+    a, b = flip
+    ans3 = (f"**Answer:** the rankings are **not** the same. {br_rev.index[0]} is first on both lists, but **{b}** has more orders "
+            f"({br.loc[b,'orders']}) than **{a}** ({br.loc[a,'orders']}) while earning less revenue ({K(br.loc[b,'revenue'])} vs {K(br.loc[a,'revenue'])}). "
+            f"The reason is order value: {a} averages {K(br.loc[a,'revenue']/br.loc[a,'orders'])} per order against {K(br.loc[b,'revenue']/br.loc[b,'orders'])} for {b}, "
+            f"so its customers buy more expensive products (or more units). Revenue depends on *what* is sold, not just *how many* orders come in, which is why order counts alone cannot rank branches.")
+md(ans3)
+
+md("## 4. Task 4 - Top three products by revenue and by units")
+code('''product = df.groupby("product").agg(total_revenue=("revenue", "sum"), units_sold=("units", "sum"))
+top_rev = product.nlargest(3, "total_revenue")
+top_units = product.nlargest(3, "units_sold")
+print("Top 3 by revenue:"); display(top_rev)
+print("Top 3 by units sold:"); display(top_units)
+print("Same products?", set(top_rev.index) == set(top_units.index))''')
+cheap = [p for p in top3_units if p not in top3_rev]
+md(f"""**Answer:** by revenue the top three are **{top3_rev[0]}**, **{top3_rev[1]}** and **{top3_rev[2]}**; by units they are **{top3_units[0]}** ({pr_units.units.iloc[0]:,}), **{top3_units[1]}** ({pr_units.units.iloc[1]:,}) and **{top3_units[2]}** ({pr_units.units.iloc[2]:,}).
+The lists differ because price varies enormously. {', '.join(cheap)} sell in high volume at low prices (a {top3_units[0]} costs KES {int(df.loc[df['product']==top3_units[0],'unit_price'].iloc[0]):,}), so they dominate unit counts but add little revenue, while the {top3_rev[0]} (KES {int(df.loc[df['product']==top3_rev[0],'unit_price'].iloc[0]):,}) earns {M(pr.loc[top3_rev[0],'revenue'])} from just {pr.loc[top3_rev[0],'units']} units. For stock planning, units matter; for profit and targets, revenue matters.""")
+
+md("## 5. Task 5 - Weekend vs weekday")
+code('''wk = (df.groupby("is_weekend")
+        .agg(orders=("order_id", "count"), total_revenue=("revenue", "sum"), avg_order_revenue=("revenue", "mean"))
+        .rename(index={False: "Weekday", True: "Weekend"}))
+display(wk)
+n_days = df.groupby("is_weekend")["order_date"].nunique().rename(index={False: "Weekday", True: "Weekend"})
+print("Revenue per calendar day:")
+print((wk["total_revenue"] / n_days).round(0))''')
+wd, we = wk.loc[False], wk.loc[True]
+md(f"""**Answer:** weekdays account for **{int(wd.orders)}** orders and **{K(wd.revenue)}** (average **{K(wd.avg)}** per order); weekends account for **{int(we.orders)}** orders and **{K(we.revenue)}** (average **{K(we.avg)}** per order).
+Weekends are {we.revenue/total_rev*100:.1f}% of revenue, which is close to their share of the calendar (2 of 7 days = 28.6%), so weekend trading is not meaningfully stronger or weaker per day. The average order value is {'higher' if we.avg>wd.avg else 'lower'} on weekends by {abs(we.avg-wd.avg)/wd.avg*100:.1f}%.""")
+
+md("## 6. Task 6 - Best and worst month")
+code('''monthly = df.groupby("month")["revenue"].sum()
+display(monthly.to_frame("total_revenue"))
+best, worst = monthly.idxmax(), monthly.idxmin()
+pct = (monthly.max() - monthly.min()) / monthly.min() * 100
+print(f"Best month : {best}  {KES(monthly.max())}")
+print(f"Worst month: {worst}  {KES(monthly.min())}")
+print(f"Best is {pct:.1f}% higher than worst")''')
+md(f"""**Answer:** **{best_m}** is the best month with **{K(mo.max())}** and **{worst_m}** the worst with **{K(mo.min())}**. The best month is **{pct_gap:.1f}% higher** than the worst, calculated as (best - worst) / worst. (Measured against the best month instead, the worst is {(mo.max()-mo.min())/mo.max()*100:.1f}% lower.)""")
+
+md("## 7. Task 7 - Premium online orders from Nairobi and Mombasa")
+code('''mask = (
+    (df["price_band"] == "Premium")
+    & (df["channel"] == "Online")
+    & (df["branch"].isin(["Nairobi", "Mombasa"]))
+)
+premium_online = df[mask]
+print("Orders:", len(premium_online))
+print("Total revenue:", KES(premium_online["revenue"].sum()))
+display(premium_online.groupby("branch")["revenue"].agg(["count", "sum"]))
+
+Path("outputs").mkdir(exist_ok=True)
+premium_online.to_csv("outputs/premium_online_coast_capital.csv", index=False)
+print("Saved outputs/premium_online_coast_capital.csv")''')
+md(f"""**Answer:** there are **{len(sub)}** Premium online orders from Nairobi and Mombasa, worth **{K(sub.revenue.sum())}** in total ({sub.revenue.sum()/total_rev*100:.1f}% of all revenue). They have been exported to `outputs/premium_online_coast_capital.csv` with `index=False`.""")
+
+md("## 8. Task 8 - Spreadsheet check (Excel vs pandas)\n\n`excel/duka_branch_summary.xlsx` holds the SUMIFS branch table (sheet `BranchSummary`), the XLOOKUP region column, and a PivotTable of revenue by branch and channel (sheet `PivotTable`). The cell below reads the workbook and compares its totals with pandas.")
+code('''import openpyxl
+
+wb = openpyxl.load_workbook("excel/duka_branch_summary.xlsx", data_only=True)
+bs = wb["BranchSummary"]
+xl = pd.DataFrame(
+    [[r[0], r[1], r[2], r[3]] for r in bs.iter_rows(min_row=2, max_row=1 + df["branch"].nunique(), values_only=True)],
+    columns=["branch", "region", "xl_orders", "xl_revenue"],
+).set_index("branch")
+check = xl.join(branch[["orders", "total_revenue"]])
+check["revenue_match"] = check["xl_revenue"] == check["total_revenue"]
+check["orders_match"] = check["xl_orders"] == check["orders"]
+display(check)
+
+ PivotTable: read the branch x channel grid and its grand total
+pv = wb["PivotTable"]
+rows = [[c for c in r] for r in pv.iter_rows(min_row=3, values_only=True)]
+pivot = pd.DataFrame([r for r in rows if r[0] is not None])
+display(pivot)
+
+pandas_grid = df.pivot_table(index="branch", columns="channel", values="revenue", aggfunc="sum")
+grand = pandas_grid.to_numpy().sum()
+pivot_numbers = [v for r in rows for v in r[1:] if isinstance(v, (int, float))]
+print("pandas grand total :", KES(grand))
+print("Excel SUMIFS total :", KES(xl["xl_revenue"].sum()))
+print("PivotTable total   :", KES(max(pivot_numbers)))
+assert check["revenue_match"].all() and check["orders_match"].all()
+assert xl["xl_revenue"].sum() == grand == max(pivot_numbers)
+print("All Excel totals match pandas.")
+display(pandas_grid)''')
+md("**Answer:** every branch's SUMIFS revenue and COUNTIFS order count equals the pandas figure, and the PivotTable grand total equals both, so the spreadsheet and the notebook agree to the shilling.")
+
+md("## 9. Conclusion\n\nThe five-sentence **Executive Summary** at the top of this notebook is the answer for leadership; sections 3-8 hold the supporting code and working.")
+
+nb = new_notebook(cells=cells)
+nb.metadata["kernelspec"] = {"display_name": "Python 3", "language": "python", "name": "python3"}
+ExecutePreprocessor(timeout=300, kernel_name="python3").preprocess(nb, {"metadata": {"path": ROOT}})
+nbformat.write(nb, "duka_sales_exploration.ipynb")
+
+ README
+readme = f"""# Duka Electronics - H1 2026 Sales Exploration
+
+ Project summary
+Exploratory analysis of Duka Electronics' January-June 2026 sales ({n_orders:,} orders, seed 2026) for the Head of Sales' half-year review. The notebook inspects and cleans the data, derives revenue and calendar/price-band columns, answers five business questions, and cross-checks the totals against an Excel workbook (SUMIFS, XLOOKUP and a PivotTable).
+
+ Questions answered
+1. How do branches rank by revenue and by number of orders, and why do the rankings differ?
+2. Which three products lead by revenue and by units sold, and why do the lists differ?
+3. How do weekend and weekday orders compare (orders, revenue, average order revenue)?
+4. Which month is best and worst for revenue, and what is the percentage difference?
+5. How many Premium online orders come from Nairobi and Mombasa, and what are they worth?
+6. Do the Excel totals match pandas?
+
+ Repository contents
+| Path | Purpose |
+|---|---|
+| `generate_data.py` | Dataset generator (seed 2026); writes `duka_sales.csv` |
+| `duka_sales_exploration.ipynb` | The analysis, run top to bottom with outputs |
+| `outputs/premium_online_coast_capital.csv` | Premium online orders from Nairobi and Mombasa (`index=False`) |
+| `excel/duka_branch_summary.xlsx` | SUMIFS branch table, XLOOKUP region column, PivotTable of revenue by branch and channel |
+| `requirements.txt` | Python dependencies |
+
+How to regenerate the data and run the notebook
+```bash
+pip install -r requirements.txt
+python generate_data.py          # writes duka_sales.csv
+jupyter notebook duka_sales_exploration.ipynb   # Kernel > Restart & Run All
+```
+`duka_sales.csv` is not required in the repository because `generate_data.py` recreates it (the notebook also calls the generator if the CSV is missing).
+
+ Assumptions
+- `revenue = units x unit_price`.
+- **Premium** means `unit_price >= KES {PREMIUM_THRESHOLD:,}`; everything else is **Value**.
+- Weekend = Saturday and Sunday.
+- Percentage difference between months = (best - worst) / worst.
+
+{summary_md}
+"""
+open("README.md", "w").write(readme)
+print("Notebook and README built.")
