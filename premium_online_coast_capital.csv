@@ -1,0 +1,34 @@
+order_id,order_date,branch,product,channel,units,unit_price,revenue,month,weekday,is_weekend,price_band
+DK0010,02/01/2026,Nairobi,Laptop 15in,Online,3,62000,186000,2026-01,Friday,FALSE,Premium
+DK0101,18/01/2026,Nairobi,Smart TV 55in,Online,1,48000,48000,2026-01,Sunday,TRUE,Premium
+DK0159,29/01/2026,Mombasa,Laptop 15in,Online,1,62000,62000,2026-01,Thursday,FALSE,Premium
+DK0314,26/02/2026,Mombasa,Laptop 15in,Online,1,62000,62000,2026-02,Thursday,FALSE,Premium
+DK0409,14/03/2026,Mombasa,Laptop 15in,Online,1,62000,62000,2026-03,Saturday,TRUE,Premium
+DK0447,20/03/2026,Mombasa,Smart TV 55in,Online,1,48000,48000,2026-03,Friday,FALSE,Premium
+DK0456,21/03/2026,Nairobi,Smart TV 55in,Online,1,48000,48000,2026-03,Saturday,TRUE,Premium
+DK0474,26/03/2026,Nairobi,Laptop 15in,Online,2,62000,124000,2026-03,Thursday,FALSE,Premium
+DK0477,26/03/2026,Mombasa,Laptop 15in,Online,1,62000,62000,2026-03,Thursday,FALSE,Premium
+DK0480,26/03/2026,Mombasa,Smart TV 55in,Online,1,48000,48000,2026-03,Thursday,FALSE,Premium
+DK0483,27/03/2026,Nairobi,Smart TV 55in,Online,3,48000,144000,2026-03,Friday,FALSE,Premium
+DK0489,27/03/2026,Nairobi,Smart TV 55in,Online,1,48000,48000,2026-03,Friday,FALSE,Premium
+DK0492,27/03/2026,Mombasa,Laptop 15in,Online,1,62000,62000,2026-03,Friday,FALSE,Premium
+DK0521,02/04/2026,Mombasa,Laptop 15in,Online,3,62000,186000,2026-04,Thursday,FALSE,Premium
+DK0530,04/04/2026,Nairobi,Laptop 15in,Online,1,62000,62000,2026-04,Saturday,TRUE,Premium
+DK0552,09/04/2026,Mombasa,Laptop 15in,Online,2,62000,124000,2026-04,Thursday,FALSE,Premium
+DK0570,11/04/2026,Nairobi,Smart TV 55in,Online,2,48000,96000,2026-04,Saturday,TRUE,Premium
+DK0593,15/04/2026,Nairobi,Laptop 15in,Online,3,62000,186000,2026-04,Wednesday,FALSE,Premium
+DK0607,17/04/2026,Mombasa,Smart TV 55in,Online,2,48000,96000,2026-04,Friday,FALSE,Premium
+DK0671,29/04/2026,Mombasa,Smart TV 55in,Online,1,48000,48000,2026-04,Wednesday,FALSE,Premium
+DK0724,10/05/2026,Mombasa,Laptop 15in,Online,1,62000,62000,2026-05,Sunday,TRUE,Premium
+DK0775,20/05/2026,Nairobi,Smart TV 55in,Online,1,48000,48000,2026-05,Wednesday,FALSE,Premium
+DK0803,24/05/2026,Mombasa,Laptop 15in,Online,1,62000,62000,2026-05,Sunday,TRUE,Premium
+DK0812,27/05/2026,Mombasa,Laptop 15in,Online,1,62000,62000,2026-05,Wednesday,FALSE,Premium
+DK0841,02/06/2026,Mombasa,Laptop 15in,Online,1,62000,62000,2026-06,Tuesday,FALSE,Premium
+DK0874,08/06/2026,Mombasa,Laptop 15in,Online,1,62000,62000,2026-06,Monday,FALSE,Premium
+DK0881,09/06/2026,Nairobi,Laptop 15in,Online,1,62000,62000,2026-06,Tuesday,FALSE,Premium
+DK0903,12/06/2026,Nairobi,Smart TV 55in,Online,2,48000,96000,2026-06,Friday,FALSE,Premium
+DK0917,15/06/2026,Nairobi,Laptop 15in,Online,1,62000,62000,2026-06,Monday,FALSE,Premium
+DK0938,18/06/2026,Nairobi,Smart TV 55in,Online,1,48000,48000,2026-06,Thursday,FALSE,Premium
+DK0941,19/06/2026,Nairobi,Smart TV 55in,Online,1,48000,48000,2026-06,Friday,FALSE,Premium
+DK0960,23/06/2026,Mombasa,Smart TV 55in,Online,1,48000,48000,2026-06,Tuesday,FALSE,Premium
+DK0992,29/06/2026,Nairobi,Laptop 15in,Online,1,62000,62000,2026-06,Monday,FALSE,Premium

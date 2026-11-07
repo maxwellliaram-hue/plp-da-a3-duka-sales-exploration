@@ -1,0 +1,1001 @@
+order_id,order_date,branch,product,channel,units,unit_price
+DK0001,01/01/2026,Nakuru,Wireless Earbuds,In-store,1,6500
+DK0002,01/01/2026,Nakuru,Bluetooth Speaker,Online,1,9500
+DK0003,01/01/2026,Nairobi,Smartphone,In-store,2,22000
+DK0004,01/01/2026,Nairobi,Tablet,In-store,3,18000
+DK0005,02/01/2026,Kisumu,Microwave,Online,1,15000
+DK0006,02/01/2026,Kisumu,Bluetooth Speaker,In-store,1,9500
+DK0007,02/01/2026,Nakuru,Wireless Earbuds,Online,2,6500
+DK0008,02/01/2026,Mombasa,Phone Charger,Online,9,1200
+DK0009,02/01/2026,Mombasa,Tablet,In-store,3,18000
+DK0010,02/01/2026,Nairobi,Laptop 15in,Online,3,62000
+DK0011,02/01/2026,Nairobi,Bluetooth Speaker,In-store,1,9500
+DK0012,02/01/2026,Eldoret,Tablet,Online,1,18000
+DK0013,03/01/2026,Nairobi,Tablet,In-store,1,18000
+DK0014,03/01/2026,Mombasa,Phone Charger,In-store,2,1200
+DK0015,03/01/2026,Nakuru,Tablet,Online,1,18000
+DK0016,03/01/2026,Mombasa,Wireless Earbuds,In-store,2,6500
+DK0017,03/01/2026,Nairobi,Phone Charger,In-store,6,1200
+DK0018,04/01/2026,Nairobi,Laptop 15in,In-store,2,62000
+DK0019,04/01/2026,Mombasa,Smartphone,In-store,1,22000
+DK0020,05/01/2026,Kisumu,Phone Charger,In-store,1,1200
+DK0021,05/01/2026,Eldoret,Phone Charger,Online,2,1200
+DK0022,05/01/2026,Nairobi,Bluetooth Speaker,Online,1,9500
+DK0023,05/01/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0024,05/01/2026,Nakuru,Bluetooth Speaker,In-store,1,9500
+DK0025,05/01/2026,Mombasa,Wireless Earbuds,In-store,2,6500
+DK0026,05/01/2026,Eldoret,Smart TV 55in,In-store,1,48000
+DK0027,05/01/2026,Eldoret,Microwave,In-store,1,15000
+DK0028,05/01/2026,Mombasa,Bluetooth Speaker,In-store,2,9500
+DK0029,06/01/2026,Nakuru,Phone Charger,In-store,3,1200
+DK0030,06/01/2026,Kisumu,Smartphone,In-store,3,22000
+DK0031,06/01/2026,Kisumu,Smartphone,In-store,2,22000
+DK0032,06/01/2026,Kisumu,Laptop 15in,In-store,1,62000
+DK0033,06/01/2026,Nairobi,Microwave,In-store,1,15000
+DK0034,06/01/2026,Nakuru,Wireless Earbuds,Online,4,6500
+DK0035,06/01/2026,Kisumu,Wireless Earbuds,In-store,2,6500
+DK0036,07/01/2026,Eldoret,Smartphone,In-store,2,22000
+DK0037,07/01/2026,Kisumu,Phone Charger,In-store,7,1200
+DK0038,07/01/2026,Eldoret,Smartphone,Online,1,22000
+DK0039,07/01/2026,Eldoret,Phone Charger,In-store,2,1200
+DK0040,07/01/2026,Nairobi,Phone Charger,In-store,4,1200
+DK0041,07/01/2026,Nairobi,Smartphone,In-store,2,22000
+DK0042,07/01/2026,Mombasa,Smartphone,In-store,2,22000
+DK0043,08/01/2026,Nakuru,Phone Charger,In-store,4,1200
+DK0044,08/01/2026,Mombasa,Wireless Earbuds,Online,2,6500
+DK0045,08/01/2026,Mombasa,Laptop 15in,In-store,2,62000
+DK0046,08/01/2026,Nairobi,Phone Charger,In-store,4,1200
+DK0047,08/01/2026,Mombasa,Wireless Earbuds,In-store,3,6500
+DK0048,09/01/2026,Mombasa,Smartphone,In-store,1,22000
+DK0049,09/01/2026,Kisumu,Smartphone,Online,1,22000
+DK0050,09/01/2026,Mombasa,Smartphone,Online,1,22000
+DK0051,09/01/2026,Nairobi,Tablet,In-store,3,18000
+DK0052,10/01/2026,Kisumu,Phone Charger,In-store,7,1200
+DK0053,10/01/2026,Kisumu,Smartphone,In-store,3,22000
+DK0054,10/01/2026,Nairobi,Tablet,Online,4,18000
+DK0055,10/01/2026,Kisumu,Smartphone,Online,1,22000
+DK0056,10/01/2026,Mombasa,Phone Charger,Online,4,1200
+DK0057,10/01/2026,Mombasa,Tablet,In-store,1,18000
+DK0058,11/01/2026,Kisumu,Smartphone,In-store,2,22000
+DK0059,11/01/2026,Kisumu,Bluetooth Speaker,Online,4,9500
+DK0060,11/01/2026,Kisumu,Tablet,Online,2,18000
+DK0061,11/01/2026,Nakuru,Wireless Earbuds,Online,1,6500
+DK0062,11/01/2026,Nakuru,Phone Charger,In-store,9,1200
+DK0063,11/01/2026,Eldoret,Smartphone,In-store,2,22000
+DK0064,12/01/2026,Nairobi,Smartphone,In-store,2,22000
+DK0065,12/01/2026,Mombasa,Phone Charger,In-store,2,1200
+DK0066,12/01/2026,Mombasa,Wireless Earbuds,In-store,1,6500
+DK0067,12/01/2026,Kisumu,Smartphone,Online,1,22000
+DK0068,12/01/2026,Kisumu,Wireless Earbuds,Online,5,6500
+DK0069,13/01/2026,Nakuru,Smartphone,In-store,1,22000
+DK0070,13/01/2026,Eldoret,Tablet,In-store,2,18000
+DK0071,14/01/2026,Kisumu,Wireless Earbuds,Online,1,6500
+DK0072,14/01/2026,Nairobi,Bluetooth Speaker,In-store,2,9500
+DK0073,14/01/2026,Kisumu,Tablet,Online,2,18000
+DK0074,14/01/2026,Eldoret,Laptop 15in,In-store,2,62000
+DK0075,14/01/2026,Mombasa,Smartphone,Online,1,22000
+DK0076,14/01/2026,Nakuru,Phone Charger,Online,6,1200
+DK0077,14/01/2026,Nakuru,Microwave,In-store,1,15000
+DK0078,15/01/2026,Nairobi,Smartphone,In-store,1,22000
+DK0079,15/01/2026,Mombasa,Wireless Earbuds,Online,2,6500
+DK0080,15/01/2026,Kisumu,Smart TV 55in,Online,1,48000
+DK0081,15/01/2026,Mombasa,Smart TV 55in,In-store,1,48000
+DK0082,15/01/2026,Mombasa,Phone Charger,In-store,3,1200
+DK0083,15/01/2026,Mombasa,Phone Charger,In-store,8,1200
+DK0084,15/01/2026,Mombasa,Smart TV 55in,In-store,1,48000
+DK0085,16/01/2026,Eldoret,Phone Charger,In-store,6,1200
+DK0086,16/01/2026,Nairobi,Microwave,In-store,1,15000
+DK0087,16/01/2026,Nakuru,Phone Charger,Online,2,1200
+DK0088,16/01/2026,Nairobi,Wireless Earbuds,In-store,4,6500
+DK0089,16/01/2026,Nairobi,Laptop 15in,In-store,3,62000
+DK0090,17/01/2026,Nakuru,Bluetooth Speaker,In-store,1,9500
+DK0091,17/01/2026,Nakuru,Smartphone,In-store,1,22000
+DK0092,17/01/2026,Nairobi,Phone Charger,In-store,9,1200
+DK0093,17/01/2026,Nairobi,Smartphone,Online,1,22000
+DK0094,17/01/2026,Mombasa,Phone Charger,In-store,1,1200
+DK0095,17/01/2026,Nairobi,Smartphone,Online,2,22000
+DK0096,17/01/2026,Mombasa,Wireless Earbuds,In-store,2,6500
+DK0097,17/01/2026,Eldoret,Wireless Earbuds,Online,1,6500
+DK0098,17/01/2026,Eldoret,Smartphone,Online,2,22000
+DK0099,18/01/2026,Nairobi,Smartphone,Online,2,22000
+DK0100,18/01/2026,Mombasa,Smart TV 55in,In-store,2,48000
+DK0101,18/01/2026,Nairobi,Smart TV 55in,Online,1,48000
+DK0102,18/01/2026,Kisumu,Laptop 15in,In-store,1,62000
+DK0103,19/01/2026,Nakuru,Bluetooth Speaker,Online,2,9500
+DK0104,19/01/2026,Nakuru,Wireless Earbuds,In-store,2,6500
+DK0105,19/01/2026,Mombasa,Bluetooth Speaker,In-store,1,9500
+DK0106,19/01/2026,Mombasa,Smart TV 55in,In-store,2,48000
+DK0107,20/01/2026,Mombasa,Phone Charger,In-store,2,1200
+DK0108,20/01/2026,Eldoret,Smartphone,In-store,1,22000
+DK0109,20/01/2026,Mombasa,Bluetooth Speaker,Online,6,9500
+DK0110,20/01/2026,Mombasa,Laptop 15in,In-store,1,62000
+DK0111,20/01/2026,Nairobi,Phone Charger,In-store,5,1200
+DK0112,20/01/2026,Mombasa,Tablet,Online,2,18000
+DK0113,20/01/2026,Nairobi,Bluetooth Speaker,In-store,1,9500
+DK0114,20/01/2026,Eldoret,Phone Charger,In-store,7,1200
+DK0115,21/01/2026,Nairobi,Phone Charger,Online,5,1200
+DK0116,21/01/2026,Nairobi,Microwave,In-store,1,15000
+DK0117,21/01/2026,Nakuru,Smartphone,In-store,1,22000
+DK0118,22/01/2026,Nairobi,Phone Charger,In-store,2,1200
+DK0119,22/01/2026,Nairobi,Microwave,In-store,2,15000
+DK0120,22/01/2026,Nairobi,Phone Charger,Online,3,1200
+DK0121,22/01/2026,Nakuru,Smartphone,Online,1,22000
+DK0122,22/01/2026,Nakuru,Bluetooth Speaker,Online,1,9500
+DK0123,22/01/2026,Nairobi,Smartphone,In-store,1,22000
+DK0124,22/01/2026,Nairobi,Tablet,Online,1,18000
+DK0125,23/01/2026,Nairobi,Phone Charger,In-store,5,1200
+DK0126,23/01/2026,Nairobi,Smartphone,Online,1,22000
+DK0127,23/01/2026,Eldoret,Tablet,In-store,2,18000
+DK0128,24/01/2026,Nakuru,Wireless Earbuds,Online,1,6500
+DK0129,24/01/2026,Nakuru,Wireless Earbuds,In-store,1,6500
+DK0130,24/01/2026,Nakuru,Smartphone,Online,1,22000
+DK0131,24/01/2026,Nakuru,Phone Charger,Online,5,1200
+DK0132,24/01/2026,Nairobi,Tablet,In-store,1,18000
+DK0133,24/01/2026,Kisumu,Smart TV 55in,In-store,1,48000
+DK0134,24/01/2026,Eldoret,Bluetooth Speaker,Online,2,9500
+DK0135,24/01/2026,Mombasa,Microwave,In-store,1,15000
+DK0136,25/01/2026,Eldoret,Laptop 15in,In-store,2,62000
+DK0137,25/01/2026,Mombasa,Bluetooth Speaker,Online,2,9500
+DK0138,25/01/2026,Mombasa,Smart TV 55in,In-store,1,48000
+DK0139,25/01/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0140,25/01/2026,Nakuru,Phone Charger,Online,3,1200
+DK0141,26/01/2026,Mombasa,Bluetooth Speaker,Online,1,9500
+DK0142,26/01/2026,Eldoret,Wireless Earbuds,In-store,3,6500
+DK0143,26/01/2026,Kisumu,Smart TV 55in,In-store,1,48000
+DK0144,26/01/2026,Nairobi,Smartphone,Online,1,22000
+DK0145,27/01/2026,Kisumu,Tablet,In-store,1,18000
+DK0146,27/01/2026,Kisumu,Bluetooth Speaker,In-store,3,9500
+DK0147,27/01/2026,Nairobi,Phone Charger,In-store,2,1200
+DK0148,27/01/2026,Mombasa,Bluetooth Speaker,Online,1,9500
+DK0149,27/01/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0150,27/01/2026,Nakuru,Tablet,In-store,1,18000
+DK0151,27/01/2026,Mombasa,Bluetooth Speaker,In-store,5,9500
+DK0152,27/01/2026,Nairobi,Smartphone,In-store,2,22000
+DK0153,27/01/2026,Nairobi,Wireless Earbuds,In-store,2,6500
+DK0154,28/01/2026,Nakuru,Smartphone,In-store,3,22000
+DK0155,28/01/2026,Mombasa,Microwave,In-store,1,15000
+DK0156,28/01/2026,Mombasa,Bluetooth Speaker,Online,4,9500
+DK0157,28/01/2026,Kisumu,Phone Charger,In-store,1,1200
+DK0158,29/01/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0159,29/01/2026,Mombasa,Laptop 15in,Online,1,62000
+DK0160,29/01/2026,Mombasa,Smartphone,In-store,3,22000
+DK0161,29/01/2026,Nakuru,Wireless Earbuds,In-store,2,6500
+DK0162,30/01/2026,Kisumu,Smart TV 55in,Online,1,48000
+DK0163,30/01/2026,Nakuru,Wireless Earbuds,In-store,1,6500
+DK0164,30/01/2026,Mombasa,Phone Charger,In-store,5,1200
+DK0165,30/01/2026,Kisumu,Phone Charger,In-store,3,1200
+DK0166,30/01/2026,Kisumu,Smart TV 55in,In-store,1,48000
+DK0167,30/01/2026,Mombasa,Smartphone,In-store,1,22000
+DK0168,30/01/2026,Nairobi,Wireless Earbuds,In-store,2,6500
+DK0169,31/01/2026,Nairobi,Smartphone,In-store,1,22000
+DK0170,31/01/2026,Nairobi,Phone Charger,Online,2,1200
+DK0171,31/01/2026,Nakuru,Bluetooth Speaker,In-store,1,9500
+DK0172,31/01/2026,Kisumu,Bluetooth Speaker,In-store,1,9500
+DK0173,01/02/2026,Eldoret,Phone Charger,In-store,5,1200
+DK0174,01/02/2026,Nakuru,Wireless Earbuds,In-store,1,6500
+DK0175,01/02/2026,Nairobi,Bluetooth Speaker,In-store,2,9500
+DK0176,01/02/2026,Nairobi,Wireless Earbuds,In-store,4,6500
+DK0177,01/02/2026,Nakuru,Phone Charger,In-store,6,1200
+DK0178,02/02/2026,Nairobi,Bluetooth Speaker,In-store,4,9500
+DK0179,02/02/2026,Nairobi,Smartphone,In-store,1,22000
+DK0180,02/02/2026,Eldoret,Smartphone,In-store,1,22000
+DK0181,02/02/2026,Mombasa,Bluetooth Speaker,Online,2,9500
+DK0182,02/02/2026,Nairobi,Microwave,In-store,1,15000
+DK0183,02/02/2026,Nakuru,Phone Charger,Online,1,1200
+DK0184,03/02/2026,Nakuru,Phone Charger,In-store,7,1200
+DK0185,03/02/2026,Eldoret,Laptop 15in,In-store,1,62000
+DK0186,03/02/2026,Nakuru,Bluetooth Speaker,In-store,1,9500
+DK0187,03/02/2026,Nairobi,Smartphone,Online,2,22000
+DK0188,04/02/2026,Nairobi,Wireless Earbuds,Online,1,6500
+DK0189,04/02/2026,Eldoret,Smartphone,Online,5,22000
+DK0190,04/02/2026,Nairobi,Wireless Earbuds,In-store,2,6500
+DK0191,04/02/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0192,04/02/2026,Kisumu,Smartphone,Online,2,22000
+DK0193,04/02/2026,Eldoret,Phone Charger,In-store,10,1200
+DK0194,05/02/2026,Nakuru,Wireless Earbuds,In-store,2,6500
+DK0195,05/02/2026,Kisumu,Microwave,In-store,2,15000
+DK0196,05/02/2026,Kisumu,Bluetooth Speaker,In-store,1,9500
+DK0197,05/02/2026,Nakuru,Phone Charger,Online,3,1200
+DK0198,06/02/2026,Nairobi,Tablet,In-store,1,18000
+DK0199,06/02/2026,Mombasa,Smartphone,In-store,1,22000
+DK0200,06/02/2026,Nakuru,Smartphone,Online,1,22000
+DK0201,06/02/2026,Nakuru,Phone Charger,In-store,3,1200
+DK0202,06/02/2026,Kisumu,Smartphone,Online,1,22000
+DK0203,06/02/2026,Nairobi,Smartphone,In-store,1,22000
+DK0204,06/02/2026,Kisumu,Smartphone,In-store,1,22000
+DK0205,07/02/2026,Mombasa,Bluetooth Speaker,In-store,1,9500
+DK0206,07/02/2026,Kisumu,Bluetooth Speaker,In-store,1,9500
+DK0207,07/02/2026,Eldoret,Wireless Earbuds,In-store,3,6500
+DK0208,07/02/2026,Nairobi,Wireless Earbuds,Online,3,6500
+DK0209,07/02/2026,Kisumu,Wireless Earbuds,Online,1,6500
+DK0210,07/02/2026,Mombasa,Bluetooth Speaker,In-store,3,9500
+DK0211,07/02/2026,Mombasa,Smartphone,In-store,1,22000
+DK0212,08/02/2026,Eldoret,Smart TV 55in,Online,1,48000
+DK0213,08/02/2026,Kisumu,Phone Charger,In-store,2,1200
+DK0214,08/02/2026,Nairobi,Phone Charger,In-store,2,1200
+DK0215,09/02/2026,Mombasa,Tablet,In-store,1,18000
+DK0216,09/02/2026,Eldoret,Phone Charger,In-store,2,1200
+DK0217,09/02/2026,Kisumu,Phone Charger,In-store,1,1200
+DK0218,09/02/2026,Kisumu,Laptop 15in,Online,2,62000
+DK0219,09/02/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0220,10/02/2026,Mombasa,Tablet,In-store,1,18000
+DK0221,10/02/2026,Nairobi,Microwave,In-store,2,15000
+DK0222,10/02/2026,Nakuru,Phone Charger,Online,2,1200
+DK0223,10/02/2026,Nakuru,Smartphone,In-store,2,22000
+DK0224,10/02/2026,Nakuru,Microwave,In-store,2,15000
+DK0225,10/02/2026,Kisumu,Smart TV 55in,Online,1,48000
+DK0226,11/02/2026,Mombasa,Phone Charger,In-store,5,1200
+DK0227,11/02/2026,Nairobi,Smartphone,In-store,2,22000
+DK0228,11/02/2026,Kisumu,Tablet,In-store,1,18000
+DK0229,11/02/2026,Nairobi,Wireless Earbuds,Online,3,6500
+DK0230,11/02/2026,Eldoret,Phone Charger,In-store,6,1200
+DK0231,11/02/2026,Nairobi,Smartphone,In-store,2,22000
+DK0232,11/02/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0233,12/02/2026,Nairobi,Wireless Earbuds,In-store,2,6500
+DK0234,12/02/2026,Mombasa,Tablet,In-store,3,18000
+DK0235,12/02/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0236,12/02/2026,Mombasa,Phone Charger,Online,3,1200
+DK0237,12/02/2026,Mombasa,Microwave,Online,3,15000
+DK0238,13/02/2026,Kisumu,Bluetooth Speaker,Online,1,9500
+DK0239,13/02/2026,Kisumu,Bluetooth Speaker,Online,1,9500
+DK0240,13/02/2026,Kisumu,Wireless Earbuds,In-store,3,6500
+DK0241,13/02/2026,Nairobi,Microwave,Online,2,15000
+DK0242,13/02/2026,Eldoret,Phone Charger,In-store,1,1200
+DK0243,13/02/2026,Nakuru,Wireless Earbuds,In-store,3,6500
+DK0244,13/02/2026,Nakuru,Microwave,Online,1,15000
+DK0245,13/02/2026,Eldoret,Phone Charger,Online,5,1200
+DK0246,13/02/2026,Nairobi,Bluetooth Speaker,In-store,3,9500
+DK0247,14/02/2026,Nakuru,Phone Charger,Online,3,1200
+DK0248,14/02/2026,Kisumu,Smartphone,Online,2,22000
+DK0249,14/02/2026,Kisumu,Phone Charger,Online,1,1200
+DK0250,15/02/2026,Nakuru,Phone Charger,In-store,5,1200
+DK0251,15/02/2026,Eldoret,Phone Charger,In-store,4,1200
+DK0252,15/02/2026,Mombasa,Laptop 15in,In-store,2,62000
+DK0253,15/02/2026,Mombasa,Laptop 15in,In-store,3,62000
+DK0254,15/02/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0255,16/02/2026,Eldoret,Tablet,In-store,1,18000
+DK0256,16/02/2026,Mombasa,Smartphone,In-store,1,22000
+DK0257,16/02/2026,Eldoret,Smartphone,In-store,2,22000
+DK0258,16/02/2026,Eldoret,Phone Charger,In-store,6,1200
+DK0259,16/02/2026,Nakuru,Phone Charger,In-store,3,1200
+DK0260,16/02/2026,Nakuru,Smartphone,In-store,2,22000
+DK0261,17/02/2026,Kisumu,Microwave,Online,2,15000
+DK0262,17/02/2026,Kisumu,Laptop 15in,In-store,1,62000
+DK0263,18/02/2026,Nairobi,Smartphone,In-store,1,22000
+DK0264,18/02/2026,Nairobi,Phone Charger,Online,4,1200
+DK0265,18/02/2026,Eldoret,Bluetooth Speaker,In-store,2,9500
+DK0266,18/02/2026,Eldoret,Laptop 15in,In-store,3,62000
+DK0267,19/02/2026,Eldoret,Smart TV 55in,Online,1,48000
+DK0268,19/02/2026,Mombasa,Wireless Earbuds,In-store,3,6500
+DK0269,19/02/2026,Kisumu,Smartphone,In-store,1,22000
+DK0270,19/02/2026,Nakuru,Smartphone,Online,2,22000
+DK0271,20/02/2026,Mombasa,Phone Charger,Online,1,1200
+DK0272,20/02/2026,Nairobi,Tablet,Online,2,18000
+DK0273,20/02/2026,Nakuru,Wireless Earbuds,Online,3,6500
+DK0274,20/02/2026,Kisumu,Tablet,In-store,2,18000
+DK0275,20/02/2026,Nakuru,Tablet,In-store,1,18000
+DK0276,20/02/2026,Nairobi,Microwave,Online,1,15000
+DK0277,20/02/2026,Kisumu,Phone Charger,In-store,5,1200
+DK0278,20/02/2026,Mombasa,Bluetooth Speaker,In-store,2,9500
+DK0279,20/02/2026,Nairobi,Phone Charger,In-store,3,1200
+DK0280,21/02/2026,Nairobi,Microwave,Online,1,15000
+DK0281,21/02/2026,Nairobi,Smartphone,Online,1,22000
+DK0282,21/02/2026,Nairobi,Wireless Earbuds,Online,3,6500
+DK0283,21/02/2026,Mombasa,Wireless Earbuds,Online,4,6500
+DK0284,21/02/2026,Nakuru,Wireless Earbuds,Online,2,6500
+DK0285,21/02/2026,Mombasa,Bluetooth Speaker,In-store,2,9500
+DK0286,22/02/2026,Kisumu,Smartphone,In-store,1,22000
+DK0287,22/02/2026,Kisumu,Microwave,Online,1,15000
+DK0288,22/02/2026,Nairobi,Microwave,In-store,1,15000
+DK0289,22/02/2026,Mombasa,Smart TV 55in,In-store,3,48000
+DK0290,22/02/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0291,23/02/2026,Nakuru,Phone Charger,Online,4,1200
+DK0292,23/02/2026,Eldoret,Smartphone,In-store,3,22000
+DK0293,23/02/2026,Nairobi,Laptop 15in,In-store,2,62000
+DK0294,23/02/2026,Nairobi,Wireless Earbuds,Online,2,6500
+DK0295,23/02/2026,Eldoret,Wireless Earbuds,Online,2,6500
+DK0296,23/02/2026,Mombasa,Wireless Earbuds,In-store,3,6500
+DK0297,23/02/2026,Mombasa,Tablet,Online,3,18000
+DK0298,23/02/2026,Nairobi,Smartphone,Online,2,22000
+DK0299,24/02/2026,Nairobi,Phone Charger,In-store,2,1200
+DK0300,24/02/2026,Nakuru,Smartphone,In-store,3,22000
+DK0301,24/02/2026,Nairobi,Smart TV 55in,In-store,2,48000
+DK0302,24/02/2026,Eldoret,Microwave,In-store,1,15000
+DK0303,24/02/2026,Mombasa,Laptop 15in,In-store,1,62000
+DK0304,25/02/2026,Nairobi,Phone Charger,Online,3,1200
+DK0305,25/02/2026,Mombasa,Smart TV 55in,In-store,1,48000
+DK0306,25/02/2026,Mombasa,Tablet,In-store,2,18000
+DK0307,26/02/2026,Nairobi,Bluetooth Speaker,In-store,4,9500
+DK0308,26/02/2026,Nairobi,Phone Charger,In-store,3,1200
+DK0309,26/02/2026,Kisumu,Phone Charger,Online,4,1200
+DK0310,26/02/2026,Mombasa,Phone Charger,Online,3,1200
+DK0311,26/02/2026,Nairobi,Tablet,In-store,1,18000
+DK0312,26/02/2026,Eldoret,Tablet,In-store,1,18000
+DK0313,26/02/2026,Nakuru,Smart TV 55in,In-store,1,48000
+DK0314,26/02/2026,Mombasa,Laptop 15in,Online,1,62000
+DK0315,26/02/2026,Nairobi,Smartphone,In-store,1,22000
+DK0316,26/02/2026,Nairobi,Smartphone,In-store,1,22000
+DK0317,27/02/2026,Eldoret,Smartphone,In-store,1,22000
+DK0318,27/02/2026,Nairobi,Bluetooth Speaker,In-store,2,9500
+DK0319,27/02/2026,Eldoret,Smartphone,In-store,1,22000
+DK0320,27/02/2026,Nakuru,Bluetooth Speaker,In-store,2,9500
+DK0321,27/02/2026,Kisumu,Smartphone,In-store,2,22000
+DK0322,27/02/2026,Nairobi,Smartphone,In-store,3,22000
+DK0323,27/02/2026,Eldoret,Microwave,In-store,2,15000
+DK0324,27/02/2026,Nairobi,Microwave,In-store,2,15000
+DK0325,27/02/2026,Mombasa,Phone Charger,In-store,4,1200
+DK0326,28/02/2026,Mombasa,Wireless Earbuds,In-store,4,6500
+DK0327,28/02/2026,Nairobi,Laptop 15in,In-store,2,62000
+DK0328,28/02/2026,Kisumu,Smartphone,Online,1,22000
+DK0329,01/03/2026,Kisumu,Smart TV 55in,Online,1,48000
+DK0330,01/03/2026,Kisumu,Smartphone,In-store,1,22000
+DK0331,01/03/2026,Nairobi,Wireless Earbuds,Online,3,6500
+DK0332,01/03/2026,Nairobi,Tablet,Online,1,18000
+DK0333,01/03/2026,Eldoret,Tablet,In-store,3,18000
+DK0334,01/03/2026,Nairobi,Tablet,In-store,2,18000
+DK0335,01/03/2026,Mombasa,Phone Charger,In-store,4,1200
+DK0336,01/03/2026,Mombasa,Phone Charger,In-store,4,1200
+DK0337,01/03/2026,Mombasa,Smartphone,In-store,3,22000
+DK0338,01/03/2026,Nairobi,Bluetooth Speaker,In-store,1,9500
+DK0339,02/03/2026,Eldoret,Laptop 15in,In-store,1,62000
+DK0340,02/03/2026,Kisumu,Phone Charger,In-store,3,1200
+DK0341,02/03/2026,Kisumu,Laptop 15in,In-store,1,62000
+DK0342,02/03/2026,Nairobi,Smartphone,In-store,1,22000
+DK0343,02/03/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0344,02/03/2026,Mombasa,Tablet,In-store,2,18000
+DK0345,02/03/2026,Nakuru,Phone Charger,In-store,6,1200
+DK0346,02/03/2026,Mombasa,Laptop 15in,In-store,2,62000
+DK0347,03/03/2026,Nairobi,Wireless Earbuds,In-store,5,6500
+DK0348,03/03/2026,Eldoret,Microwave,In-store,1,15000
+DK0349,03/03/2026,Nairobi,Smartphone,In-store,1,22000
+DK0350,03/03/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0351,03/03/2026,Kisumu,Smart TV 55in,Online,1,48000
+DK0352,04/03/2026,Kisumu,Phone Charger,Online,1,1200
+DK0353,04/03/2026,Eldoret,Smart TV 55in,Online,1,48000
+DK0354,05/03/2026,Eldoret,Wireless Earbuds,In-store,3,6500
+DK0355,05/03/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0356,05/03/2026,Nakuru,Smartphone,In-store,5,22000
+DK0357,05/03/2026,Kisumu,Bluetooth Speaker,Online,3,9500
+DK0358,05/03/2026,Mombasa,Phone Charger,In-store,2,1200
+DK0359,06/03/2026,Nairobi,Wireless Earbuds,In-store,3,6500
+DK0360,06/03/2026,Nairobi,Smartphone,Online,2,22000
+DK0361,06/03/2026,Nakuru,Smart TV 55in,Online,3,48000
+DK0362,06/03/2026,Nakuru,Phone Charger,In-store,2,1200
+DK0363,06/03/2026,Mombasa,Wireless Earbuds,In-store,4,6500
+DK0364,06/03/2026,Nakuru,Smartphone,In-store,1,22000
+DK0365,06/03/2026,Eldoret,Smartphone,In-store,1,22000
+DK0366,06/03/2026,Nairobi,Microwave,In-store,1,15000
+DK0367,06/03/2026,Nakuru,Laptop 15in,Online,1,62000
+DK0368,07/03/2026,Nakuru,Phone Charger,Online,2,1200
+DK0369,07/03/2026,Kisumu,Tablet,Online,1,18000
+DK0370,07/03/2026,Nakuru,Phone Charger,In-store,3,1200
+DK0371,07/03/2026,Nakuru,Tablet,In-store,4,18000
+DK0372,07/03/2026,Eldoret,Smartphone,In-store,1,22000
+DK0373,07/03/2026,Nairobi,Bluetooth Speaker,Online,1,9500
+DK0374,07/03/2026,Nakuru,Wireless Earbuds,In-store,2,6500
+DK0375,08/03/2026,Kisumu,Smartphone,Online,1,22000
+DK0376,08/03/2026,Kisumu,Smartphone,In-store,1,22000
+DK0377,08/03/2026,Nairobi,Smartphone,Online,2,22000
+DK0378,08/03/2026,Nairobi,Phone Charger,In-store,3,1200
+DK0379,08/03/2026,Nakuru,Bluetooth Speaker,In-store,3,9500
+DK0380,08/03/2026,Nakuru,Wireless Earbuds,In-store,1,6500
+DK0381,08/03/2026,Nairobi,Phone Charger,In-store,6,1200
+DK0382,08/03/2026,Nairobi,Smart TV 55in,In-store,2,48000
+DK0383,08/03/2026,Mombasa,Tablet,Online,1,18000
+DK0384,08/03/2026,Nairobi,Smartphone,In-store,1,22000
+DK0385,09/03/2026,Nairobi,Tablet,In-store,1,18000
+DK0386,09/03/2026,Mombasa,Phone Charger,Online,5,1200
+DK0387,09/03/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0388,09/03/2026,Nakuru,Phone Charger,In-store,2,1200
+DK0389,10/03/2026,Nakuru,Tablet,Online,1,18000
+DK0390,10/03/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0391,10/03/2026,Nairobi,Smartphone,In-store,1,22000
+DK0392,10/03/2026,Eldoret,Wireless Earbuds,Online,6,6500
+DK0393,10/03/2026,Eldoret,Smartphone,Online,2,22000
+DK0394,11/03/2026,Kisumu,Phone Charger,In-store,5,1200
+DK0395,12/03/2026,Kisumu,Smartphone,In-store,1,22000
+DK0396,12/03/2026,Mombasa,Bluetooth Speaker,Online,1,9500
+DK0397,12/03/2026,Nairobi,Bluetooth Speaker,In-store,1,9500
+DK0398,12/03/2026,Nakuru,Smartphone,In-store,1,22000
+DK0399,12/03/2026,Mombasa,Smartphone,In-store,2,22000
+DK0400,13/03/2026,Nairobi,Wireless Earbuds,Online,2,6500
+DK0401,13/03/2026,Nairobi,Smartphone,Online,1,22000
+DK0402,13/03/2026,Eldoret,Smartphone,In-store,1,22000
+DK0403,13/03/2026,Nairobi,Laptop 15in,In-store,3,62000
+DK0404,13/03/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0405,13/03/2026,Nairobi,Smartphone,In-store,1,22000
+DK0406,13/03/2026,Nairobi,Tablet,In-store,3,18000
+DK0407,14/03/2026,Kisumu,Wireless Earbuds,Online,3,6500
+DK0408,14/03/2026,Kisumu,Wireless Earbuds,In-store,1,6500
+DK0409,14/03/2026,Mombasa,Laptop 15in,Online,1,62000
+DK0410,14/03/2026,Mombasa,Wireless Earbuds,Online,1,6500
+DK0411,14/03/2026,Eldoret,Phone Charger,In-store,3,1200
+DK0412,14/03/2026,Kisumu,Smartphone,In-store,1,22000
+DK0413,14/03/2026,Mombasa,Wireless Earbuds,Online,2,6500
+DK0414,14/03/2026,Nakuru,Tablet,In-store,1,18000
+DK0415,15/03/2026,Nairobi,Microwave,In-store,2,15000
+DK0416,15/03/2026,Kisumu,Wireless Earbuds,Online,2,6500
+DK0417,15/03/2026,Nairobi,Microwave,In-store,1,15000
+DK0418,15/03/2026,Mombasa,Laptop 15in,In-store,1,62000
+DK0419,15/03/2026,Nairobi,Wireless Earbuds,In-store,1,6500
+DK0420,16/03/2026,Nairobi,Wireless Earbuds,In-store,3,6500
+DK0421,16/03/2026,Mombasa,Phone Charger,Online,2,1200
+DK0422,16/03/2026,Mombasa,Smartphone,Online,1,22000
+DK0423,16/03/2026,Kisumu,Wireless Earbuds,In-store,1,6500
+DK0424,16/03/2026,Nakuru,Smart TV 55in,In-store,1,48000
+DK0425,16/03/2026,Nakuru,Tablet,In-store,2,18000
+DK0426,16/03/2026,Nairobi,Wireless Earbuds,In-store,4,6500
+DK0427,17/03/2026,Mombasa,Laptop 15in,In-store,2,62000
+DK0428,17/03/2026,Mombasa,Laptop 15in,In-store,1,62000
+DK0429,17/03/2026,Nairobi,Smart TV 55in,In-store,2,48000
+DK0430,17/03/2026,Mombasa,Bluetooth Speaker,In-store,2,9500
+DK0431,17/03/2026,Kisumu,Wireless Earbuds,In-store,1,6500
+DK0432,17/03/2026,Nairobi,Bluetooth Speaker,In-store,1,9500
+DK0433,18/03/2026,Kisumu,Smartphone,Online,3,22000
+DK0434,18/03/2026,Nairobi,Bluetooth Speaker,Online,3,9500
+DK0435,18/03/2026,Nairobi,Tablet,In-store,1,18000
+DK0436,18/03/2026,Nakuru,Wireless Earbuds,Online,5,6500
+DK0437,18/03/2026,Mombasa,Wireless Earbuds,In-store,2,6500
+DK0438,18/03/2026,Nairobi,Phone Charger,In-store,3,1200
+DK0439,19/03/2026,Nairobi,Wireless Earbuds,Online,3,6500
+DK0440,19/03/2026,Nairobi,Wireless Earbuds,In-store,1,6500
+DK0441,19/03/2026,Mombasa,Phone Charger,In-store,2,1200
+DK0442,19/03/2026,Nairobi,Smartphone,In-store,1,22000
+DK0443,19/03/2026,Nairobi,Wireless Earbuds,Online,1,6500
+DK0444,19/03/2026,Eldoret,Laptop 15in,Online,1,62000
+DK0445,20/03/2026,Kisumu,Laptop 15in,Online,1,62000
+DK0446,20/03/2026,Nairobi,Smartphone,In-store,3,22000
+DK0447,20/03/2026,Mombasa,Smart TV 55in,Online,1,48000
+DK0448,20/03/2026,Eldoret,Phone Charger,In-store,3,1200
+DK0449,20/03/2026,Nairobi,Wireless Earbuds,Online,2,6500
+DK0450,20/03/2026,Nairobi,Smartphone,Online,1,22000
+DK0451,21/03/2026,Kisumu,Smart TV 55in,In-store,1,48000
+DK0452,21/03/2026,Kisumu,Smart TV 55in,In-store,2,48000
+DK0453,21/03/2026,Nakuru,Smartphone,Online,5,22000
+DK0454,21/03/2026,Mombasa,Smartphone,In-store,3,22000
+DK0455,21/03/2026,Kisumu,Bluetooth Speaker,In-store,4,9500
+DK0456,21/03/2026,Nairobi,Smart TV 55in,Online,1,48000
+DK0457,22/03/2026,Eldoret,Bluetooth Speaker,Online,1,9500
+DK0458,22/03/2026,Kisumu,Wireless Earbuds,In-store,3,6500
+DK0459,22/03/2026,Nairobi,Smartphone,Online,4,22000
+DK0460,23/03/2026,Kisumu,Wireless Earbuds,Online,9,6500
+DK0461,23/03/2026,Mombasa,Bluetooth Speaker,In-store,1,9500
+DK0462,23/03/2026,Nakuru,Smartphone,In-store,1,22000
+DK0463,23/03/2026,Eldoret,Smartphone,In-store,1,22000
+DK0464,23/03/2026,Mombasa,Wireless Earbuds,In-store,1,6500
+DK0465,24/03/2026,Eldoret,Microwave,Online,1,15000
+DK0466,24/03/2026,Nakuru,Tablet,Online,3,18000
+DK0467,25/03/2026,Nakuru,Bluetooth Speaker,In-store,2,9500
+DK0468,25/03/2026,Kisumu,Wireless Earbuds,Online,6,6500
+DK0469,25/03/2026,Kisumu,Smartphone,In-store,1,22000
+DK0470,25/03/2026,Mombasa,Tablet,Online,5,18000
+DK0471,25/03/2026,Mombasa,Smartphone,Online,1,22000
+DK0472,25/03/2026,Mombasa,Tablet,Online,3,18000
+DK0473,25/03/2026,Nairobi,Wireless Earbuds,In-store,2,6500
+DK0474,26/03/2026,Nairobi,Laptop 15in,Online,2,62000
+DK0475,26/03/2026,Mombasa,Smartphone,In-store,1,22000
+DK0476,26/03/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0477,26/03/2026,Mombasa,Laptop 15in,Online,1,62000
+DK0478,26/03/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0479,26/03/2026,Nairobi,Tablet,Online,1,18000
+DK0480,26/03/2026,Mombasa,Smart TV 55in,Online,1,48000
+DK0481,26/03/2026,Kisumu,Tablet,Online,3,18000
+DK0482,26/03/2026,Kisumu,Smartphone,Online,2,22000
+DK0483,27/03/2026,Nairobi,Smart TV 55in,Online,3,48000
+DK0484,27/03/2026,Eldoret,Smartphone,Online,3,22000
+DK0485,27/03/2026,Mombasa,Tablet,In-store,1,18000
+DK0486,27/03/2026,Nakuru,Microwave,In-store,2,15000
+DK0487,27/03/2026,Kisumu,Wireless Earbuds,In-store,1,6500
+DK0488,27/03/2026,Kisumu,Tablet,In-store,1,18000
+DK0489,27/03/2026,Nairobi,Smart TV 55in,Online,1,48000
+DK0490,27/03/2026,Nairobi,Wireless Earbuds,In-store,5,6500
+DK0491,27/03/2026,Eldoret,Tablet,In-store,2,18000
+DK0492,27/03/2026,Mombasa,Laptop 15in,Online,1,62000
+DK0493,28/03/2026,Kisumu,Smart TV 55in,In-store,1,48000
+DK0494,28/03/2026,Kisumu,Microwave,Online,2,15000
+DK0495,28/03/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0496,28/03/2026,Kisumu,Smartphone,In-store,1,22000
+DK0497,29/03/2026,Nairobi,Bluetooth Speaker,Online,1,9500
+DK0498,29/03/2026,Mombasa,Bluetooth Speaker,In-store,5,9500
+DK0499,29/03/2026,Nairobi,Smartphone,Online,1,22000
+DK0500,29/03/2026,Eldoret,Laptop 15in,In-store,1,62000
+DK0501,30/03/2026,Nakuru,Laptop 15in,In-store,1,62000
+DK0502,30/03/2026,Mombasa,Bluetooth Speaker,In-store,2,9500
+DK0503,30/03/2026,Mombasa,Smart TV 55in,In-store,1,48000
+DK0504,30/03/2026,Kisumu,Laptop 15in,In-store,1,62000
+DK0505,30/03/2026,Nairobi,Bluetooth Speaker,In-store,2,9500
+DK0506,31/03/2026,Kisumu,Tablet,In-store,1,18000
+DK0507,31/03/2026,Nairobi,Phone Charger,In-store,3,1200
+DK0508,31/03/2026,Mombasa,Bluetooth Speaker,In-store,1,9500
+DK0509,31/03/2026,Nakuru,Tablet,Online,2,18000
+DK0510,31/03/2026,Kisumu,Phone Charger,In-store,5,1200
+DK0511,31/03/2026,Nairobi,Tablet,In-store,1,18000
+DK0512,31/03/2026,Nairobi,Wireless Earbuds,In-store,1,6500
+DK0513,31/03/2026,Kisumu,Tablet,In-store,2,18000
+DK0514,31/03/2026,Mombasa,Wireless Earbuds,In-store,3,6500
+DK0515,01/04/2026,Kisumu,Bluetooth Speaker,In-store,3,9500
+DK0516,01/04/2026,Nairobi,Smartphone,In-store,2,22000
+DK0517,01/04/2026,Nairobi,Smartphone,In-store,2,22000
+DK0518,01/04/2026,Kisumu,Laptop 15in,In-store,1,62000
+DK0519,01/04/2026,Mombasa,Smartphone,In-store,1,22000
+DK0520,02/04/2026,Eldoret,Microwave,In-store,1,15000
+DK0521,02/04/2026,Mombasa,Laptop 15in,Online,3,62000
+DK0522,03/04/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0523,03/04/2026,Kisumu,Smart TV 55in,In-store,1,48000
+DK0524,03/04/2026,Nairobi,Phone Charger,In-store,1,1200
+DK0525,03/04/2026,Nairobi,Wireless Earbuds,Online,3,6500
+DK0526,04/04/2026,Eldoret,Wireless Earbuds,Online,2,6500
+DK0527,04/04/2026,Eldoret,Phone Charger,In-store,4,1200
+DK0528,04/04/2026,Nairobi,Tablet,In-store,1,18000
+DK0529,04/04/2026,Kisumu,Wireless Earbuds,In-store,1,6500
+DK0530,04/04/2026,Nairobi,Laptop 15in,Online,1,62000
+DK0531,04/04/2026,Nakuru,Bluetooth Speaker,In-store,3,9500
+DK0532,04/04/2026,Kisumu,Tablet,Online,1,18000
+DK0533,05/04/2026,Eldoret,Smartphone,In-store,1,22000
+DK0534,05/04/2026,Nakuru,Phone Charger,In-store,1,1200
+DK0535,05/04/2026,Nairobi,Microwave,In-store,1,15000
+DK0536,05/04/2026,Nairobi,Phone Charger,Online,5,1200
+DK0537,06/04/2026,Mombasa,Phone Charger,In-store,2,1200
+DK0538,06/04/2026,Nakuru,Tablet,Online,1,18000
+DK0539,06/04/2026,Nakuru,Microwave,Online,3,15000
+DK0540,06/04/2026,Eldoret,Smartphone,In-store,1,22000
+DK0541,06/04/2026,Nairobi,Microwave,Online,1,15000
+DK0542,06/04/2026,Nairobi,Tablet,In-store,2,18000
+DK0543,06/04/2026,Mombasa,Phone Charger,In-store,3,1200
+DK0544,07/04/2026,Nairobi,Tablet,Online,1,18000
+DK0545,07/04/2026,Nairobi,Laptop 15in,In-store,2,62000
+DK0546,07/04/2026,Eldoret,Smartphone,In-store,1,22000
+DK0547,07/04/2026,Nairobi,Tablet,In-store,1,18000
+DK0548,07/04/2026,Nakuru,Wireless Earbuds,Online,1,6500
+DK0549,07/04/2026,Nairobi,Tablet,In-store,3,18000
+DK0550,08/04/2026,Mombasa,Microwave,In-store,2,15000
+DK0551,08/04/2026,Nakuru,Microwave,Online,1,15000
+DK0552,09/04/2026,Mombasa,Laptop 15in,Online,2,62000
+DK0553,09/04/2026,Nairobi,Bluetooth Speaker,Online,1,9500
+DK0554,09/04/2026,Nairobi,Microwave,In-store,1,15000
+DK0555,09/04/2026,Mombasa,Tablet,In-store,1,18000
+DK0556,09/04/2026,Mombasa,Microwave,Online,2,15000
+DK0557,09/04/2026,Eldoret,Smartphone,Online,1,22000
+DK0558,10/04/2026,Nairobi,Microwave,In-store,1,15000
+DK0559,10/04/2026,Eldoret,Smartphone,In-store,1,22000
+DK0560,10/04/2026,Nakuru,Smartphone,In-store,1,22000
+DK0561,10/04/2026,Mombasa,Smartphone,Online,1,22000
+DK0562,10/04/2026,Eldoret,Smartphone,Online,1,22000
+DK0563,10/04/2026,Nairobi,Phone Charger,Online,4,1200
+DK0564,10/04/2026,Kisumu,Bluetooth Speaker,In-store,2,9500
+DK0565,11/04/2026,Nairobi,Smart TV 55in,In-store,3,48000
+DK0566,11/04/2026,Eldoret,Tablet,In-store,2,18000
+DK0567,11/04/2026,Kisumu,Smartphone,In-store,1,22000
+DK0568,11/04/2026,Mombasa,Wireless Earbuds,In-store,1,6500
+DK0569,11/04/2026,Eldoret,Wireless Earbuds,In-store,2,6500
+DK0570,11/04/2026,Nairobi,Smart TV 55in,Online,2,48000
+DK0571,11/04/2026,Eldoret,Bluetooth Speaker,In-store,5,9500
+DK0572,11/04/2026,Mombasa,Bluetooth Speaker,In-store,1,9500
+DK0573,12/04/2026,Nakuru,Smart TV 55in,In-store,1,48000
+DK0574,12/04/2026,Nakuru,Tablet,In-store,2,18000
+DK0575,12/04/2026,Kisumu,Wireless Earbuds,In-store,1,6500
+DK0576,12/04/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0577,12/04/2026,Kisumu,Bluetooth Speaker,Online,1,9500
+DK0578,12/04/2026,Eldoret,Phone Charger,In-store,1,1200
+DK0579,12/04/2026,Kisumu,Microwave,In-store,1,15000
+DK0580,13/04/2026,Mombasa,Bluetooth Speaker,In-store,4,9500
+DK0581,13/04/2026,Kisumu,Smart TV 55in,Online,2,48000
+DK0582,13/04/2026,Mombasa,Laptop 15in,In-store,1,62000
+DK0583,13/04/2026,Eldoret,Phone Charger,In-store,4,1200
+DK0584,14/04/2026,Kisumu,Phone Charger,Online,4,1200
+DK0585,14/04/2026,Nairobi,Tablet,Online,1,18000
+DK0586,14/04/2026,Nakuru,Microwave,In-store,1,15000
+DK0587,14/04/2026,Nakuru,Phone Charger,Online,4,1200
+DK0588,14/04/2026,Kisumu,Bluetooth Speaker,In-store,1,9500
+DK0589,14/04/2026,Nairobi,Smartphone,Online,1,22000
+DK0590,14/04/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0591,14/04/2026,Nairobi,Smartphone,Online,1,22000
+DK0592,14/04/2026,Nairobi,Phone Charger,In-store,2,1200
+DK0593,15/04/2026,Nairobi,Laptop 15in,Online,3,62000
+DK0594,15/04/2026,Mombasa,Bluetooth Speaker,In-store,3,9500
+DK0595,15/04/2026,Kisumu,Phone Charger,In-store,4,1200
+DK0596,15/04/2026,Nairobi,Wireless Earbuds,In-store,2,6500
+DK0597,15/04/2026,Mombasa,Smartphone,Online,4,22000
+DK0598,15/04/2026,Mombasa,Microwave,In-store,1,15000
+DK0599,16/04/2026,Nakuru,Bluetooth Speaker,In-store,3,9500
+DK0600,16/04/2026,Eldoret,Smart TV 55in,Online,1,48000
+DK0601,16/04/2026,Nairobi,Smartphone,Online,3,22000
+DK0602,16/04/2026,Nakuru,Wireless Earbuds,In-store,4,6500
+DK0603,16/04/2026,Nakuru,Phone Charger,In-store,6,1200
+DK0604,16/04/2026,Kisumu,Smartphone,Online,1,22000
+DK0605,17/04/2026,Nakuru,Microwave,In-store,2,15000
+DK0606,17/04/2026,Mombasa,Tablet,In-store,4,18000
+DK0607,17/04/2026,Mombasa,Smart TV 55in,Online,2,48000
+DK0608,18/04/2026,Mombasa,Tablet,In-store,1,18000
+DK0609,18/04/2026,Mombasa,Bluetooth Speaker,Online,2,9500
+DK0610,18/04/2026,Nairobi,Wireless Earbuds,In-store,4,6500
+DK0611,18/04/2026,Nairobi,Bluetooth Speaker,Online,1,9500
+DK0612,18/04/2026,Nakuru,Smart TV 55in,In-store,1,48000
+DK0613,19/04/2026,Eldoret,Wireless Earbuds,Online,2,6500
+DK0614,19/04/2026,Kisumu,Wireless Earbuds,In-store,1,6500
+DK0615,19/04/2026,Mombasa,Phone Charger,In-store,3,1200
+DK0616,19/04/2026,Nakuru,Microwave,Online,1,15000
+DK0617,19/04/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0618,19/04/2026,Nairobi,Phone Charger,In-store,3,1200
+DK0619,19/04/2026,Kisumu,Wireless Earbuds,In-store,4,6500
+DK0620,19/04/2026,Nairobi,Tablet,Online,1,18000
+DK0621,20/04/2026,Nakuru,Bluetooth Speaker,Online,1,9500
+DK0622,20/04/2026,Eldoret,Smartphone,Online,1,22000
+DK0623,20/04/2026,Eldoret,Phone Charger,In-store,7,1200
+DK0624,20/04/2026,Kisumu,Smartphone,Online,3,22000
+DK0625,20/04/2026,Kisumu,Smart TV 55in,In-store,1,48000
+DK0626,20/04/2026,Eldoret,Laptop 15in,In-store,1,62000
+DK0627,20/04/2026,Kisumu,Laptop 15in,Online,1,62000
+DK0628,20/04/2026,Eldoret,Smart TV 55in,In-store,1,48000
+DK0629,20/04/2026,Nairobi,Bluetooth Speaker,In-store,1,9500
+DK0630,21/04/2026,Nairobi,Smartphone,In-store,4,22000
+DK0631,21/04/2026,Kisumu,Microwave,Online,1,15000
+DK0632,21/04/2026,Mombasa,Tablet,In-store,1,18000
+DK0633,22/04/2026,Nairobi,Smartphone,In-store,1,22000
+DK0634,22/04/2026,Mombasa,Smartphone,In-store,1,22000
+DK0635,22/04/2026,Nakuru,Wireless Earbuds,Online,1,6500
+DK0636,22/04/2026,Nakuru,Tablet,Online,1,18000
+DK0637,23/04/2026,Nairobi,Phone Charger,Online,6,1200
+DK0638,23/04/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0639,23/04/2026,Nakuru,Smart TV 55in,Online,1,48000
+DK0640,23/04/2026,Mombasa,Phone Charger,Online,1,1200
+DK0641,23/04/2026,Eldoret,Phone Charger,In-store,2,1200
+DK0642,23/04/2026,Kisumu,Smartphone,In-store,1,22000
+DK0643,23/04/2026,Nairobi,Phone Charger,In-store,2,1200
+DK0644,24/04/2026,Kisumu,Microwave,In-store,2,15000
+DK0645,24/04/2026,Nairobi,Phone Charger,Online,2,1200
+DK0646,24/04/2026,Kisumu,Wireless Earbuds,In-store,1,6500
+DK0647,25/04/2026,Mombasa,Microwave,In-store,1,15000
+DK0648,26/04/2026,Eldoret,Bluetooth Speaker,In-store,1,9500
+DK0649,26/04/2026,Nairobi,Phone Charger,In-store,3,1200
+DK0650,26/04/2026,Kisumu,Smart TV 55in,Online,1,48000
+DK0651,26/04/2026,Mombasa,Phone Charger,In-store,7,1200
+DK0652,26/04/2026,Eldoret,Smartphone,In-store,2,22000
+DK0653,26/04/2026,Nairobi,Phone Charger,In-store,4,1200
+DK0654,26/04/2026,Kisumu,Wireless Earbuds,In-store,2,6500
+DK0655,26/04/2026,Nairobi,Wireless Earbuds,In-store,1,6500
+DK0656,27/04/2026,Eldoret,Tablet,Online,1,18000
+DK0657,27/04/2026,Nairobi,Microwave,Online,4,15000
+DK0658,27/04/2026,Nakuru,Tablet,In-store,2,18000
+DK0659,27/04/2026,Kisumu,Smartphone,Online,2,22000
+DK0660,27/04/2026,Mombasa,Bluetooth Speaker,In-store,2,9500
+DK0661,27/04/2026,Nakuru,Phone Charger,Online,2,1200
+DK0662,27/04/2026,Mombasa,Phone Charger,In-store,7,1200
+DK0663,28/04/2026,Eldoret,Smart TV 55in,Online,2,48000
+DK0664,28/04/2026,Nakuru,Phone Charger,Online,1,1200
+DK0665,28/04/2026,Nakuru,Laptop 15in,Online,1,62000
+DK0666,28/04/2026,Nairobi,Bluetooth Speaker,In-store,1,9500
+DK0667,29/04/2026,Kisumu,Smartphone,In-store,2,22000
+DK0668,29/04/2026,Nairobi,Tablet,In-store,1,18000
+DK0669,29/04/2026,Kisumu,Tablet,Online,1,18000
+DK0670,29/04/2026,Nairobi,Wireless Earbuds,Online,2,6500
+DK0671,29/04/2026,Mombasa,Smart TV 55in,Online,1,48000
+DK0672,29/04/2026,Kisumu,Wireless Earbuds,In-store,4,6500
+DK0673,29/04/2026,Mombasa,Laptop 15in,In-store,2,62000
+DK0674,30/04/2026,Eldoret,Phone Charger,In-store,2,1200
+DK0675,30/04/2026,Nakuru,Smart TV 55in,In-store,1,48000
+DK0676,30/04/2026,Eldoret,Laptop 15in,Online,2,62000
+DK0677,30/04/2026,Nairobi,Phone Charger,In-store,5,1200
+DK0678,30/04/2026,Mombasa,Wireless Earbuds,Online,2,6500
+DK0679,30/04/2026,Nakuru,Phone Charger,Online,3,1200
+DK0680,30/04/2026,Eldoret,Bluetooth Speaker,In-store,1,9500
+DK0681,30/04/2026,Kisumu,Tablet,In-store,1,18000
+DK0682,01/05/2026,Mombasa,Bluetooth Speaker,Online,1,9500
+DK0683,01/05/2026,Nairobi,Phone Charger,In-store,1,1200
+DK0684,01/05/2026,Mombasa,Wireless Earbuds,Online,1,6500
+DK0685,01/05/2026,Kisumu,Smart TV 55in,In-store,3,48000
+DK0686,01/05/2026,Nairobi,Tablet,In-store,1,18000
+DK0687,01/05/2026,Eldoret,Laptop 15in,Online,1,62000
+DK0688,02/05/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0689,02/05/2026,Eldoret,Microwave,Online,2,15000
+DK0690,02/05/2026,Eldoret,Wireless Earbuds,In-store,1,6500
+DK0691,02/05/2026,Nakuru,Bluetooth Speaker,Online,1,9500
+DK0692,03/05/2026,Kisumu,Phone Charger,In-store,3,1200
+DK0693,03/05/2026,Mombasa,Phone Charger,Online,2,1200
+DK0694,03/05/2026,Nairobi,Wireless Earbuds,In-store,1,6500
+DK0695,03/05/2026,Eldoret,Smartphone,Online,1,22000
+DK0696,04/05/2026,Nairobi,Bluetooth Speaker,In-store,2,9500
+DK0697,04/05/2026,Nairobi,Smartphone,In-store,4,22000
+DK0698,04/05/2026,Eldoret,Smart TV 55in,In-store,1,48000
+DK0699,05/05/2026,Kisumu,Microwave,In-store,1,15000
+DK0700,05/05/2026,Eldoret,Phone Charger,In-store,5,1200
+DK0701,05/05/2026,Nairobi,Phone Charger,In-store,3,1200
+DK0702,05/05/2026,Mombasa,Tablet,Online,1,18000
+DK0703,05/05/2026,Eldoret,Smartphone,In-store,4,22000
+DK0704,06/05/2026,Nairobi,Bluetooth Speaker,In-store,1,9500
+DK0705,06/05/2026,Nakuru,Bluetooth Speaker,In-store,2,9500
+DK0706,06/05/2026,Kisumu,Bluetooth Speaker,In-store,2,9500
+DK0707,07/05/2026,Nairobi,Bluetooth Speaker,Online,3,9500
+DK0708,07/05/2026,Kisumu,Phone Charger,In-store,3,1200
+DK0709,07/05/2026,Mombasa,Phone Charger,In-store,6,1200
+DK0710,07/05/2026,Kisumu,Bluetooth Speaker,In-store,3,9500
+DK0711,07/05/2026,Nairobi,Wireless Earbuds,In-store,1,6500
+DK0712,07/05/2026,Kisumu,Laptop 15in,In-store,1,62000
+DK0713,07/05/2026,Kisumu,Wireless Earbuds,Online,2,6500
+DK0714,07/05/2026,Eldoret,Smart TV 55in,Online,1,48000
+DK0715,07/05/2026,Nakuru,Smartphone,Online,1,22000
+DK0716,08/05/2026,Eldoret,Phone Charger,Online,1,1200
+DK0717,08/05/2026,Nairobi,Phone Charger,In-store,4,1200
+DK0718,08/05/2026,Kisumu,Smartphone,In-store,4,22000
+DK0719,08/05/2026,Mombasa,Phone Charger,Online,5,1200
+DK0720,08/05/2026,Kisumu,Phone Charger,In-store,4,1200
+DK0721,09/05/2026,Kisumu,Laptop 15in,Online,3,62000
+DK0722,09/05/2026,Nairobi,Laptop 15in,In-store,2,62000
+DK0723,09/05/2026,Nairobi,Bluetooth Speaker,In-store,3,9500
+DK0724,10/05/2026,Mombasa,Laptop 15in,Online,1,62000
+DK0725,10/05/2026,Kisumu,Microwave,In-store,4,15000
+DK0726,10/05/2026,Eldoret,Phone Charger,In-store,4,1200
+DK0727,11/05/2026,Mombasa,Phone Charger,Online,2,1200
+DK0728,11/05/2026,Kisumu,Smart TV 55in,Online,2,48000
+DK0729,11/05/2026,Mombasa,Smartphone,In-store,5,22000
+DK0730,11/05/2026,Nairobi,Wireless Earbuds,Online,1,6500
+DK0731,11/05/2026,Nairobi,Tablet,In-store,5,18000
+DK0732,11/05/2026,Nakuru,Phone Charger,Online,2,1200
+DK0733,12/05/2026,Nakuru,Phone Charger,In-store,7,1200
+DK0734,12/05/2026,Eldoret,Phone Charger,In-store,3,1200
+DK0735,12/05/2026,Kisumu,Smart TV 55in,Online,2,48000
+DK0736,12/05/2026,Nairobi,Bluetooth Speaker,Online,2,9500
+DK0737,12/05/2026,Kisumu,Microwave,Online,4,15000
+DK0738,13/05/2026,Nairobi,Wireless Earbuds,In-store,1,6500
+DK0739,13/05/2026,Kisumu,Microwave,In-store,1,15000
+DK0740,13/05/2026,Mombasa,Wireless Earbuds,In-store,3,6500
+DK0741,13/05/2026,Mombasa,Laptop 15in,In-store,1,62000
+DK0742,13/05/2026,Mombasa,Smartphone,Online,2,22000
+DK0743,14/05/2026,Nairobi,Smartphone,In-store,1,22000
+DK0744,14/05/2026,Nairobi,Bluetooth Speaker,In-store,4,9500
+DK0745,14/05/2026,Eldoret,Wireless Earbuds,In-store,5,6500
+DK0746,14/05/2026,Eldoret,Wireless Earbuds,In-store,4,6500
+DK0747,14/05/2026,Nairobi,Wireless Earbuds,In-store,5,6500
+DK0748,14/05/2026,Nairobi,Phone Charger,Online,4,1200
+DK0749,15/05/2026,Nairobi,Wireless Earbuds,Online,1,6500
+DK0750,15/05/2026,Nakuru,Bluetooth Speaker,Online,2,9500
+DK0751,15/05/2026,Nakuru,Laptop 15in,In-store,1,62000
+DK0752,15/05/2026,Kisumu,Smart TV 55in,In-store,2,48000
+DK0753,15/05/2026,Mombasa,Phone Charger,Online,6,1200
+DK0754,15/05/2026,Eldoret,Bluetooth Speaker,In-store,2,9500
+DK0755,15/05/2026,Mombasa,Bluetooth Speaker,Online,1,9500
+DK0756,15/05/2026,Eldoret,Tablet,In-store,1,18000
+DK0757,16/05/2026,Nakuru,Bluetooth Speaker,In-store,2,9500
+DK0758,16/05/2026,Kisumu,Smart TV 55in,In-store,1,48000
+DK0759,16/05/2026,Mombasa,Phone Charger,In-store,2,1200
+DK0760,17/05/2026,Eldoret,Bluetooth Speaker,Online,2,9500
+DK0761,17/05/2026,Nakuru,Smart TV 55in,In-store,1,48000
+DK0762,17/05/2026,Nakuru,Laptop 15in,In-store,1,62000
+DK0763,17/05/2026,Nairobi,Smartphone,In-store,1,22000
+DK0764,17/05/2026,Eldoret,Wireless Earbuds,In-store,4,6500
+DK0765,18/05/2026,Eldoret,Tablet,In-store,1,18000
+DK0766,18/05/2026,Kisumu,Tablet,In-store,1,18000
+DK0767,18/05/2026,Nairobi,Smartphone,In-store,2,22000
+DK0768,18/05/2026,Kisumu,Phone Charger,In-store,3,1200
+DK0769,19/05/2026,Eldoret,Wireless Earbuds,Online,3,6500
+DK0770,19/05/2026,Mombasa,Smart TV 55in,In-store,1,48000
+DK0771,19/05/2026,Mombasa,Phone Charger,In-store,7,1200
+DK0772,19/05/2026,Nairobi,Smartphone,In-store,1,22000
+DK0773,19/05/2026,Kisumu,Smart TV 55in,In-store,3,48000
+DK0774,20/05/2026,Eldoret,Smart TV 55in,In-store,1,48000
+DK0775,20/05/2026,Nairobi,Smart TV 55in,Online,1,48000
+DK0776,20/05/2026,Mombasa,Wireless Earbuds,Online,1,6500
+DK0777,20/05/2026,Kisumu,Wireless Earbuds,In-store,2,6500
+DK0778,21/05/2026,Kisumu,Phone Charger,In-store,3,1200
+DK0779,21/05/2026,Kisumu,Wireless Earbuds,In-store,1,6500
+DK0780,21/05/2026,Nairobi,Bluetooth Speaker,In-store,3,9500
+DK0781,21/05/2026,Kisumu,Smartphone,Online,2,22000
+DK0782,21/05/2026,Nairobi,Tablet,In-store,1,18000
+DK0783,21/05/2026,Eldoret,Bluetooth Speaker,In-store,1,9500
+DK0784,21/05/2026,Nakuru,Wireless Earbuds,Online,2,6500
+DK0785,21/05/2026,Kisumu,Phone Charger,In-store,5,1200
+DK0786,22/05/2026,Kisumu,Smartphone,Online,3,22000
+DK0787,22/05/2026,Nairobi,Phone Charger,In-store,4,1200
+DK0788,22/05/2026,Nairobi,Tablet,Online,1,18000
+DK0789,22/05/2026,Mombasa,Bluetooth Speaker,Online,2,9500
+DK0790,23/05/2026,Kisumu,Phone Charger,In-store,2,1200
+DK0791,23/05/2026,Nakuru,Wireless Earbuds,Online,2,6500
+DK0792,23/05/2026,Nairobi,Wireless Earbuds,In-store,3,6500
+DK0793,23/05/2026,Eldoret,Tablet,In-store,2,18000
+DK0794,23/05/2026,Mombasa,Wireless Earbuds,In-store,2,6500
+DK0795,23/05/2026,Nairobi,Phone Charger,In-store,8,1200
+DK0796,23/05/2026,Mombasa,Wireless Earbuds,Online,1,6500
+DK0797,23/05/2026,Eldoret,Phone Charger,In-store,5,1200
+DK0798,23/05/2026,Kisumu,Smartphone,In-store,1,22000
+DK0799,23/05/2026,Nairobi,Phone Charger,Online,5,1200
+DK0800,24/05/2026,Mombasa,Phone Charger,Online,1,1200
+DK0801,24/05/2026,Kisumu,Smartphone,In-store,1,22000
+DK0802,24/05/2026,Nairobi,Bluetooth Speaker,Online,1,9500
+DK0803,24/05/2026,Mombasa,Laptop 15in,Online,1,62000
+DK0804,25/05/2026,Mombasa,Smartphone,In-store,1,22000
+DK0805,25/05/2026,Mombasa,Bluetooth Speaker,In-store,2,9500
+DK0806,25/05/2026,Nakuru,Tablet,Online,2,18000
+DK0807,26/05/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0808,26/05/2026,Eldoret,Phone Charger,Online,4,1200
+DK0809,26/05/2026,Nairobi,Smart TV 55in,In-store,3,48000
+DK0810,26/05/2026,Nairobi,Bluetooth Speaker,In-store,3,9500
+DK0811,27/05/2026,Nairobi,Wireless Earbuds,Online,1,6500
+DK0812,27/05/2026,Mombasa,Laptop 15in,Online,1,62000
+DK0813,27/05/2026,Kisumu,Phone Charger,Online,1,1200
+DK0814,27/05/2026,Nakuru,Phone Charger,In-store,3,1200
+DK0815,27/05/2026,Mombasa,Laptop 15in,In-store,1,62000
+DK0816,27/05/2026,Kisumu,Smartphone,Online,3,22000
+DK0817,28/05/2026,Mombasa,Phone Charger,Online,4,1200
+DK0818,28/05/2026,Eldoret,Phone Charger,Online,2,1200
+DK0819,28/05/2026,Nairobi,Tablet,In-store,1,18000
+DK0820,28/05/2026,Eldoret,Smartphone,In-store,1,22000
+DK0821,29/05/2026,Nairobi,Tablet,In-store,1,18000
+DK0822,29/05/2026,Eldoret,Microwave,Online,2,15000
+DK0823,29/05/2026,Eldoret,Laptop 15in,Online,2,62000
+DK0824,30/05/2026,Mombasa,Laptop 15in,In-store,2,62000
+DK0825,30/05/2026,Nairobi,Microwave,Online,1,15000
+DK0826,30/05/2026,Kisumu,Phone Charger,Online,9,1200
+DK0827,30/05/2026,Nairobi,Bluetooth Speaker,In-store,2,9500
+DK0828,30/05/2026,Nakuru,Phone Charger,In-store,5,1200
+DK0829,30/05/2026,Kisumu,Microwave,Online,2,15000
+DK0830,30/05/2026,Mombasa,Wireless Earbuds,In-store,1,6500
+DK0831,30/05/2026,Mombasa,Smart TV 55in,In-store,1,48000
+DK0832,31/05/2026,Mombasa,Smart TV 55in,In-store,2,48000
+DK0833,31/05/2026,Nairobi,Phone Charger,In-store,4,1200
+DK0834,31/05/2026,Kisumu,Tablet,In-store,2,18000
+DK0835,01/06/2026,Kisumu,Phone Charger,In-store,5,1200
+DK0836,01/06/2026,Eldoret,Smartphone,In-store,1,22000
+DK0837,01/06/2026,Nakuru,Bluetooth Speaker,In-store,4,9500
+DK0838,01/06/2026,Nakuru,Bluetooth Speaker,In-store,2,9500
+DK0839,02/06/2026,Eldoret,Smartphone,In-store,1,22000
+DK0840,02/06/2026,Nairobi,Smartphone,In-store,1,22000
+DK0841,02/06/2026,Mombasa,Laptop 15in,Online,1,62000
+DK0842,02/06/2026,Nairobi,Phone Charger,In-store,5,1200
+DK0843,02/06/2026,Kisumu,Smartphone,Online,1,22000
+DK0844,03/06/2026,Nakuru,Wireless Earbuds,Online,1,6500
+DK0845,03/06/2026,Eldoret,Smart TV 55in,In-store,1,48000
+DK0846,03/06/2026,Nakuru,Smartphone,Online,1,22000
+DK0847,03/06/2026,Mombasa,Smartphone,Online,1,22000
+DK0848,03/06/2026,Kisumu,Wireless Earbuds,Online,2,6500
+DK0849,03/06/2026,Nairobi,Phone Charger,In-store,5,1200
+DK0850,04/06/2026,Kisumu,Smartphone,Online,4,22000
+DK0851,04/06/2026,Nakuru,Smartphone,In-store,1,22000
+DK0852,04/06/2026,Kisumu,Smart TV 55in,In-store,2,48000
+DK0853,04/06/2026,Eldoret,Laptop 15in,In-store,1,62000
+DK0854,04/06/2026,Nairobi,Tablet,In-store,2,18000
+DK0855,05/06/2026,Nairobi,Wireless Earbuds,In-store,5,6500
+DK0856,05/06/2026,Eldoret,Phone Charger,In-store,2,1200
+DK0857,05/06/2026,Mombasa,Laptop 15in,In-store,1,62000
+DK0858,05/06/2026,Mombasa,Smartphone,In-store,1,22000
+DK0859,05/06/2026,Mombasa,Phone Charger,Online,8,1200
+DK0860,05/06/2026,Mombasa,Phone Charger,Online,3,1200
+DK0861,06/06/2026,Nairobi,Smartphone,In-store,1,22000
+DK0862,06/06/2026,Nairobi,Smartphone,Online,1,22000
+DK0863,06/06/2026,Mombasa,Bluetooth Speaker,In-store,2,9500
+DK0864,06/06/2026,Nairobi,Wireless Earbuds,Online,1,6500
+DK0865,06/06/2026,Mombasa,Wireless Earbuds,Online,1,6500
+DK0866,06/06/2026,Nairobi,Phone Charger,In-store,4,1200
+DK0867,06/06/2026,Nairobi,Phone Charger,In-store,6,1200
+DK0868,06/06/2026,Kisumu,Bluetooth Speaker,Online,2,9500
+DK0869,07/06/2026,Mombasa,Smart TV 55in,In-store,1,48000
+DK0870,07/06/2026,Kisumu,Smart TV 55in,In-store,2,48000
+DK0871,07/06/2026,Nakuru,Smartphone,Online,3,22000
+DK0872,07/06/2026,Nakuru,Bluetooth Speaker,In-store,2,9500
+DK0873,08/06/2026,Nakuru,Phone Charger,In-store,5,1200
+DK0874,08/06/2026,Mombasa,Laptop 15in,Online,1,62000
+DK0875,08/06/2026,Mombasa,Wireless Earbuds,In-store,3,6500
+DK0876,08/06/2026,Nairobi,Tablet,In-store,1,18000
+DK0877,08/06/2026,Nakuru,Tablet,In-store,1,18000
+DK0878,08/06/2026,Nairobi,Wireless Earbuds,In-store,1,6500
+DK0879,08/06/2026,Nakuru,Wireless Earbuds,In-store,3,6500
+DK0880,09/06/2026,Nairobi,Phone Charger,In-store,1,1200
+DK0881,09/06/2026,Nairobi,Laptop 15in,Online,1,62000
+DK0882,09/06/2026,Nakuru,Smartphone,In-store,1,22000
+DK0883,09/06/2026,Nakuru,Bluetooth Speaker,In-store,1,9500
+DK0884,09/06/2026,Nakuru,Tablet,In-store,1,18000
+DK0885,09/06/2026,Nairobi,Smartphone,In-store,2,22000
+DK0886,09/06/2026,Nakuru,Phone Charger,In-store,3,1200
+DK0887,09/06/2026,Nakuru,Smart TV 55in,In-store,1,48000
+DK0888,10/06/2026,Nairobi,Tablet,Online,1,18000
+DK0889,10/06/2026,Eldoret,Smart TV 55in,In-store,2,48000
+DK0890,10/06/2026,Eldoret,Wireless Earbuds,Online,2,6500
+DK0891,10/06/2026,Kisumu,Smartphone,In-store,1,22000
+DK0892,10/06/2026,Nairobi,Tablet,Online,1,18000
+DK0893,10/06/2026,Kisumu,Smartphone,In-store,4,22000
+DK0894,10/06/2026,Nairobi,Phone Charger,Online,5,1200
+DK0895,10/06/2026,Nairobi,Wireless Earbuds,Online,1,6500
+DK0896,10/06/2026,Eldoret,Phone Charger,Online,2,1200
+DK0897,11/06/2026,Kisumu,Phone Charger,In-store,5,1200
+DK0898,11/06/2026,Eldoret,Microwave,In-store,2,15000
+DK0899,11/06/2026,Kisumu,Microwave,In-store,3,15000
+DK0900,11/06/2026,Nairobi,Smartphone,Online,4,22000
+DK0901,12/06/2026,Kisumu,Phone Charger,Online,1,1200
+DK0902,12/06/2026,Mombasa,Smartphone,Online,1,22000
+DK0903,12/06/2026,Nairobi,Smart TV 55in,Online,2,48000
+DK0904,12/06/2026,Nakuru,Smart TV 55in,Online,1,48000
+DK0905,12/06/2026,Nakuru,Smartphone,In-store,4,22000
+DK0906,12/06/2026,Eldoret,Phone Charger,Online,5,1200
+DK0907,13/06/2026,Kisumu,Wireless Earbuds,Online,1,6500
+DK0908,13/06/2026,Mombasa,Phone Charger,In-store,5,1200
+DK0909,13/06/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0910,13/06/2026,Nairobi,Smartphone,In-store,1,22000
+DK0911,13/06/2026,Nairobi,Microwave,In-store,1,15000
+DK0912,13/06/2026,Nakuru,Tablet,Online,1,18000
+DK0913,14/06/2026,Mombasa,Bluetooth Speaker,In-store,2,9500
+DK0914,14/06/2026,Eldoret,Phone Charger,In-store,3,1200
+DK0915,14/06/2026,Kisumu,Bluetooth Speaker,In-store,3,9500
+DK0916,14/06/2026,Mombasa,Laptop 15in,In-store,1,62000
+DK0917,15/06/2026,Nairobi,Laptop 15in,Online,1,62000
+DK0918,15/06/2026,Kisumu,Laptop 15in,In-store,1,62000
+DK0919,15/06/2026,Nakuru,Bluetooth Speaker,Online,1,9500
+DK0920,15/06/2026,Nairobi,Wireless Earbuds,In-store,2,6500
+DK0921,16/06/2026,Mombasa,Tablet,In-store,1,18000
+DK0922,16/06/2026,Nakuru,Smartphone,Online,1,22000
+DK0923,16/06/2026,Kisumu,Wireless Earbuds,In-store,2,6500
+DK0924,16/06/2026,Kisumu,Bluetooth Speaker,In-store,1,9500
+DK0925,16/06/2026,Mombasa,Bluetooth Speaker,In-store,1,9500
+DK0926,16/06/2026,Nairobi,Smartphone,Online,1,22000
+DK0927,16/06/2026,Mombasa,Tablet,In-store,1,18000
+DK0928,16/06/2026,Kisumu,Microwave,Online,2,15000
+DK0929,17/06/2026,Nairobi,Microwave,In-store,1,15000
+DK0930,17/06/2026,Mombasa,Phone Charger,Online,1,1200
+DK0931,17/06/2026,Nairobi,Smartphone,Online,1,22000
+DK0932,17/06/2026,Mombasa,Laptop 15in,In-store,1,62000
+DK0933,17/06/2026,Nairobi,Tablet,Online,1,18000
+DK0934,17/06/2026,Nairobi,Phone Charger,In-store,5,1200
+DK0935,18/06/2026,Eldoret,Wireless Earbuds,Online,1,6500
+DK0936,18/06/2026,Mombasa,Wireless Earbuds,In-store,1,6500
+DK0937,18/06/2026,Mombasa,Tablet,In-store,2,18000
+DK0938,18/06/2026,Nairobi,Smart TV 55in,Online,1,48000
+DK0939,18/06/2026,Nakuru,Phone Charger,In-store,1,1200
+DK0940,18/06/2026,Kisumu,Bluetooth Speaker,Online,1,9500
+DK0941,19/06/2026,Nairobi,Smart TV 55in,Online,1,48000
+DK0942,19/06/2026,Eldoret,Laptop 15in,In-store,1,62000
+DK0943,19/06/2026,Nakuru,Phone Charger,In-store,3,1200
+DK0944,19/06/2026,Mombasa,Laptop 15in,In-store,2,62000
+DK0945,19/06/2026,Nairobi,Smartphone,In-store,3,22000
+DK0946,19/06/2026,Kisumu,Wireless Earbuds,In-store,1,6500
+DK0947,19/06/2026,Nakuru,Smart TV 55in,Online,2,48000
+DK0948,19/06/2026,Nairobi,Bluetooth Speaker,In-store,1,9500
+DK0949,20/06/2026,Nairobi,Bluetooth Speaker,In-store,2,9500
+DK0950,20/06/2026,Nairobi,Smartphone,Online,1,22000
+DK0951,20/06/2026,Nairobi,Microwave,In-store,2,15000
+DK0952,20/06/2026,Nakuru,Microwave,Online,1,15000
+DK0953,21/06/2026,Nairobi,Smartphone,In-store,3,22000
+DK0954,21/06/2026,Nakuru,Tablet,In-store,1,18000
+DK0955,21/06/2026,Nairobi,Phone Charger,In-store,3,1200
+DK0956,21/06/2026,Kisumu,Smartphone,In-store,1,22000
+DK0957,21/06/2026,Eldoret,Phone Charger,In-store,5,1200
+DK0958,21/06/2026,Eldoret,Phone Charger,In-store,4,1200
+DK0959,23/06/2026,Nakuru,Smart TV 55in,In-store,1,48000
+DK0960,23/06/2026,Mombasa,Smart TV 55in,Online,1,48000
+DK0961,23/06/2026,Mombasa,Wireless Earbuds,Online,2,6500
+DK0962,23/06/2026,Nairobi,Smartphone,In-store,2,22000
+DK0963,23/06/2026,Mombasa,Phone Charger,In-store,4,1200
+DK0964,23/06/2026,Mombasa,Bluetooth Speaker,In-store,1,9500
+DK0965,23/06/2026,Eldoret,Phone Charger,Online,4,1200
+DK0966,23/06/2026,Mombasa,Laptop 15in,In-store,3,62000
+DK0967,23/06/2026,Mombasa,Bluetooth Speaker,In-store,1,9500
+DK0968,23/06/2026,Mombasa,Laptop 15in,In-store,1,62000
+DK0969,24/06/2026,Mombasa,Smartphone,In-store,2,22000
+DK0970,24/06/2026,Nakuru,Wireless Earbuds,Online,3,6500
+DK0971,24/06/2026,Eldoret,Smart TV 55in,Online,1,48000
+DK0972,24/06/2026,Nairobi,Tablet,In-store,2,18000
+DK0973,24/06/2026,Nairobi,Smartphone,In-store,1,22000
+DK0974,24/06/2026,Nairobi,Microwave,Online,3,15000
+DK0975,24/06/2026,Nakuru,Phone Charger,In-store,2,1200
+DK0976,25/06/2026,Eldoret,Smart TV 55in,In-store,1,48000
+DK0977,26/06/2026,Nairobi,Wireless Earbuds,Online,5,6500
+DK0978,26/06/2026,Eldoret,Smartphone,In-store,2,22000
+DK0979,26/06/2026,Kisumu,Smartphone,In-store,1,22000
+DK0980,26/06/2026,Nairobi,Smartphone,In-store,1,22000
+DK0981,27/06/2026,Nairobi,Microwave,In-store,1,15000
+DK0982,27/06/2026,Nairobi,Laptop 15in,In-store,1,62000
+DK0983,27/06/2026,Nakuru,Bluetooth Speaker,In-store,1,9500
+DK0984,27/06/2026,Mombasa,Bluetooth Speaker,Online,2,9500
+DK0985,28/06/2026,Kisumu,Smart TV 55in,Online,1,48000
+DK0986,28/06/2026,Nairobi,Bluetooth Speaker,In-store,3,9500
+DK0987,28/06/2026,Nakuru,Smartphone,In-store,2,22000
+DK0988,28/06/2026,Nairobi,Microwave,In-store,1,15000
+DK0989,28/06/2026,Nakuru,Phone Charger,In-store,2,1200
+DK0990,29/06/2026,Nairobi,Phone Charger,In-store,5,1200
+DK0991,29/06/2026,Nairobi,Smart TV 55in,In-store,1,48000
+DK0992,29/06/2026,Nairobi,Laptop 15in,Online,1,62000
+DK0993,29/06/2026,Kisumu,Wireless Earbuds,Online,1,6500
+DK0994,29/06/2026,Nakuru,Smartphone,In-store,2,22000
+DK0995,29/06/2026,Eldoret,Smartphone,In-store,3,22000
+DK0996,29/06/2026,Kisumu,Phone Charger,Online,1,1200
+DK0997,29/06/2026,Kisumu,Smartphone,Online,1,22000
+DK0998,29/06/2026,Nakuru,Phone Charger,In-store,5,1200
+DK0999,30/06/2026,Kisumu,Wireless Earbuds,In-store,1,6500
+DK1000,30/06/2026,Mombasa,Microwave,In-store,1,15000
